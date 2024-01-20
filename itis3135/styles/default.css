@@ -12,7 +12,7 @@ a {
 
 a:hover {
     color: white;
-    text-decoration: line;
+    text-decoration: solid;
 }
 
 a:visited {
