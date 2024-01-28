@@ -29,12 +29,72 @@ h2 {
     text-align: center;
 }
 
+h3 {
+    text-align: center;
+}
+
+table, th, td {
+    border-collapse: collapse;
+    border-spacing: 3px;
+    position: relative;
+    margin: auto;
+    border: 2px solid black;
+}
+
+.table2 {
+    margin: auto;
+    vertical-align: middle;
+}
+
+tr {
+    display: table-row;
+    border-collapse: separate;
+    vertical-align: middle;
+}
+
+tr:nth-child(odd) {
+    background-color: darkmagenta;
+}
+
+tr:nth-child(even) {
+    background-color: darkviolet;
+}
+th {
+    display: table-cell;
+    text-align: center;
+    background-color: rgb(95, 28, 129);
+    color: dark
+}
+
+td {
+    display: table-cell;
+    border-collapse: separate;
+    text-align: center;
+}
 .punch {
     height: 300px;
     width: 300px;
     object-fit: none;
 }
-figure {
+
+.tab-data {
+    display: table;
+    text-align: center;
+    margin: 0 auto;
+    list-style-position: outside;
+}
+
+.tab-data li {
+    text-align: left;
+}
+
+figcaption {
     text-align: center;
     font-style: italic;
+}
+
+figure {
+    text-align: center;
+    display: block;
+    margin: 0 auto;
 }
