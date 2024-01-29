@@ -22,7 +22,27 @@
         </nav>
     </header>
     <main>
-        <h2>Forms</h2>
+        <h2>HTML Forms</h2>
+        <p>Please fill out the form below: </p>
+        <div class="form">
+            <form action="#" method="post">
+                <label for="name">Name: </label>
+                <input type="text" id="name" name="name" placeholder="Enter your name" required><br><br>
+                <label for="number">Phone Number: </label>
+                <input type="tel" id="number" name="number" placeholder="Enter your phone number" required><br><br>
+                <label for="email">Email: </label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required><br><br>
+                <label for="cat-name">Cat's Name: </label>
+                <input type="text" id="cat-name" name="cat-name" placeholder="Enter your cat's name"><br><br>
+                <label for="cat-age">Cat Age: </label>
+                <input type="radio" id="kitten" name="age" value="kitten">kitten
+                <input type="radio" id="adult" name="age" value="adult">adult
+                <input type="radio" id="senior" name="age" value="senior">senior
+                <br><br>
+                <input type="reset" value="Reset" class="reset">
+                <input type="submit" value="Submit" class="submit">
+            </form>
+        </div>
     </main>
     <footer>
         <nav>
