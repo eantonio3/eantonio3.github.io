@@ -110,6 +110,10 @@ figure {
     margin: 20px auto;
 }
 
+.form-caption {
+    text-align: center;
+}
+
 fieldset {
     border: 2px solid purple;
     margin-bottom: 2px;
