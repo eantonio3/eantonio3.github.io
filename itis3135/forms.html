@@ -28,8 +28,8 @@
             <form action="#" method="post">
                 <label for="name">Name: </label>
                 <input type="text" id="name" name="name" placeholder="Enter your name" required><br><br>
-                <label for="number">Phone Number: </label>
-                <input type="tel" id="number" name="number" placeholder="Enter your phone number" required><br><br>
+                <label for="tel">Phone Number: </label>
+                <input type="tel" id="tel" name="tel" placeholder="(xxx) xxx-xxxx" required><br><br>
                 <label for="email">Email: </label>
                 <input type="email" id="email" name="email" placeholder="Enter your email" required><br><br>
                 <label for="cat-name">Cat's Name: </label>
@@ -37,8 +37,27 @@
                 <label for="cat-age">Cat Age: </label>
                 <input type="radio" id="kitten" name="age" value="kitten">kitten
                 <input type="radio" id="adult" name="age" value="adult">adult
-                <input type="radio" id="senior" name="age" value="senior">senior
-                <br><br>
+                <input type="radio" id="senior" name="age" value="senior">senior<br><br>
+                <fieldset>
+                    <label for="item">Choose Cat Toys: </label>
+                    <input type="checkbox" id="item">Feather Wand
+                    <input type="checkbox" id="item">Ball o' String<br>
+                    <input type="checkbox" id="item">Bells
+                    <input type="checkbox" id="item">Catnip Mice
+                    <input type="checkbox" id="item">Laser Pointer
+                    <input type="checkbox" id="item">Spring
+                    <br>
+                </fieldset>
+                <fieldset>
+                    <label for="dropdown">Choose Cat Treats: </label>
+                    <select id="dropdown" name="dropdown">
+                    <option value="option0">(select one)</option>
+                    <option value="option1">Tuna Flavored Treat</option>
+                    <option value="option2">Chicken Flavored Treat</option>
+                    <option value="option3">Beef Flavored Treat</option>
+                    <option value="option4">Salmon Flavored Treat</option>
+                </select><br>
+                </fieldset><br>
                 <input type="reset" value="Reset" class="reset">
                 <input type="submit" value="Submit" class="submit">
             </form>
