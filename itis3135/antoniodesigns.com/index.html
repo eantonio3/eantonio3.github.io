@@ -3,15 +3,91 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Antonio Designs Page</title>
+    <title>Antonio Designs</title>
     <style>
         body {
-            color: black;
-            background-color: rgba(70, 0, 136, 0.438);
+            background-color: #001242;
+            color: #D6D2C3;
+            font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+        }
+        footer {
+            font-size: 14px;
+            text-align: center;
+        }
+        header {
+            text-align: center;
+            font-size: 20px;
+            color: #7F0799;
+        }
+        #logo {
+            width: 25px;
+            margin: 2px auto;
+        }
+        a {
+            color: #776A98;
+        }
+        a:hover {
+            color: #D6D2C3;
+        }
+        h2 {
+            text-align: center;
+            color: #D6D2C3;
+        }
+        p {
+            color: #D0A5C0;
+        }
+        li {
+            list-style-type: square;
+            color: #D0A5C0;
         }
     </style>
 </head>
 <body>
-    <p> This is the design page for Antonio Designs.</p> 
+    <header>
+        <h1>Antonio Designs <img id="logo" src="lavender.png" alt="company logo"></h1>
+    </header> 
+    <main>
+        <h2>Our Services</h2>
+        <p>
+            Established in 2014, Antonio Designs was created to let the world turn their website 
+            ideas into reality. Where creativity meets functionality, our team is passionate about
+            delivering top-notch design, consulting, and development services to help your business 
+            thrive. 
+        </p>
+        <h2>Who We Are</h2>
+        <ul>
+            <li>Passionate and creative professionals</li>
+            <li>Experts in design, consulting, and development</li>
+            <li>Committed to delivering top-notch solutions</li>
+            <li></li>
+            <li>Innovative and forward-thinking team</li>
+            <li></li>
+        </ul>
+        <h2>What We Can Do For You</h2>
+        <p>At Antonio Designs, we offer a wide range of services to cater to your business needs.
+            Whether you're looking for stunning visual design, strategic consulting, or robust development,
+            we have the expertise to exceed your expectations. Let us transform your ideas into success
+            by contacting us today!
+        </p><br>
+        <h3>Contact Us:</h3>
+        <p>Email: contact@antoniodesigns.com</p>
+        <p>Phone: +1 (828) 420-3299</p>
+        <p>Address: 210 E Trade St, Charlotte NC</p>
+    </main>
+    
+    <footer>
+        <a href="antoniodesigns.com/">Antonio Designs</a> &copy;2024</p>
+
+        <a href="https://validator.w3.org/check?uri=referer" id="validation_link_html">
+            <img style="border:0;width:88px;height:31px" src="https://eantonio3.github.io/itis3135/images/button_validation_html5.png" alt="Valid HTML!">
+        </a>
+        <a href="https://jigsaw.w3.org/css-validator/check/referer" id="validation_link_css">
+            <img style="border:0;width:88px;height:31px" src="https://jigsaw.w3.org/css-validator/images/vcss" alt="Valid CSS!">        
+        </a>        
+    </footer>
+    <script>
+        document.getElementById("validation_link_html").setAttribute("href", "https://validator.w3.org/check?uri=" + location.href);
+        document.getElementById("validation_link_css").setAttribute("href", "https://jigsaw.w3.org/css-validator/validator?uri=" + location.href);
+    </script>
 </body>
 </html>

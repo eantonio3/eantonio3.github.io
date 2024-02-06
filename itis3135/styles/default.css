@@ -1,22 +1,18 @@
 body {
-    background-color: rgba(70, 0, 136, 0.438);
+    background-color: #c38ce0;
     text-align: center;
     color: #564154;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 a {
-    color: purple;
+    color: rgb(100, 4, 100);
     text-decoration: none;
 }
 
 a:hover {
-    color: white;
+    color: #F5F5F5;
     text-decoration: solid;
-}
-
-a:visited {
-    color: black;
 }
 
 main {
@@ -39,6 +35,7 @@ table, th, td {
     position: relative;
     margin: auto;
     border: 2px solid black;
+    color: rgb(24, 0, 40);
 }
 
 .table2 {
