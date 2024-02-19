@@ -56,26 +56,39 @@ function userPolygon() {
 }
 
 function catAgeCalculator() {
-
+    let input = prompt("How old is your cat in human years?");
+    let catAge = Math.round(input * 7)
+    alert("Your cat is " + catAge + " cat years old!");
 }
 
 function catTranslator() {
+    let input = prompt("Enter a message to translate into meows:");
+    if (input) {
+        alert("Meow meow meow! (Translation: " + input + ")");
+    }}
 
-}
-
-function catNameGenerator() {
-
+function catToySelector() {
+    let toys = ["catnip mouse", "feather teaser", "ball track toy", "treat puzzle toy"];
+    let randomIndex = Math.floor(Math.random() * toys.length);
+    let selectedToy = toys[randomIndex];
+    alert("Your cat will love playing with this " + selectedToy + "!");
 }
 
 function catnipCalculator() {
-    
-}
+    let weight = prompt("Enter your cat's weight:");
+    let age = prompt("Enter your cat's age:");
+    let catnip = Math.round(weight / age);
+    alert("Optimal catnip amount calculated: " + catnip + " grams.");}
 
 function catMoodDetector() {
     let moods = ["happy", "playful", "relaxed", "curious", "sleepy"];
     let randomIndex = Math.floor(Math.random() * moods.length);
     let mood = moods[randomIndex];
     alert("Your cat seems " + mood + " today! Maybe it's time for some playtime!");
+}
+
+function catTreatDispenser() {
+    alert("Yum! Here's a tasty treat for your cat!");
 }
 
 document.addEventListener("DOMContentLoaded", function() {
