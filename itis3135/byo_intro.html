@@ -10,9 +10,50 @@
     <div data-include="components/header.html"></div>
     <main>
         <h2>BYO Intro</h2>
-        
+        <h3>Please fill out the form below so we can build your own intro page:</h3>
+        <form class="byo-form" id="form">
+            <div id="byo">
+                <label for="name">Name: </label>
+                <input type="text" id="name" placeholder="Enter your name" required value="Efren Antonio"><br><br>
+                <label for="mascot">Mascot: </label>
+                <input type="text" id="mascot" placeholder="Enter your mascot" required value="Ecstatic Alligator"><br><br>
+                <label for="image">Image (PNG or JPG):</label>
+                <input type="file" id="image" accept=".png, .jpg" required><br><br>
+                <label for="caption">Image Caption:</label>
+                <input type="text" id="caption" placeholder="Enter an image caption" required value="My kitty napping next to my desk"><br><br>
+                <label for="personal">Personal Background: </label>
+                <textarea id="personal" placeholder="Enter personal background" required>I was born in Charlotte but moved to a Hendersonville, NC where I started college, now I’m back in Charlotte to finish college.</textarea><br><br>
+                <label for="professional">Professional Background: </label>
+                <textarea id="professional" placeholder="Enter professional background" required> I’ve worked in construction, stocked shelves at Ingles markets, and made/delivered pizzas for Pi Squared Pizza.</textarea><br><br>
+                <label for="academic">Academic Background: </label>
+                <textarea id="academic" placeholder="Enter academic background" required>I went to an early college high school and got my associates degree alongside my high school diploma, now I’m at UNCC for my bachelor’s in computer science with a concentration in cyber security.</textarea><br><br>
+                <label for="webdev">Web Development Background: </label>
+                <textarea id="webdev" placeholder="Enter web development background" required>I’ve taken computer science classes that included some website development projects.</textarea><br><br>
+                <label for="platform">Primary Computer Platform:</label>
+                <input type="text" id="platform" placeholder="Enter computer platform" required value="Windows 11"><br><br>
+                <label for="coursesTaking">Courses I'm Taking: </label>
+                <div id="coursesInput"></div>
+                <input type="button" id="coursesTaking" value="Add Course" required><br>
+                </div><br>
+                <label for="funny">Funny Thing? </label>
+                <input type="text" id="funny" placeholder="Enter something funny" value="I’ve got a kitty who occasionally chews on my computer cables."><br><br>
+                <label for="anything">Anything Else?</label>
+                <input type="text" id="anything" placeholder="Enter anything else" value="Huge fan of UFC, NASCAR, and Counter-Strike"><br><br>
+                <fieldset>
+                    <label>
+                        <input type="checkbox" id="agreement">
+                        "I understand that what is on this page is not password protected and 
+                        I will not put anything here that I don’t want publicly available."
+                    </label>
+                </fieldset><br>
+                <input type="submit" value="Submit">
+                <input type="reset" value="Reset">
+            </div>  
+        </form>
+        <h3 onclick="reset()">Reset</h3>
     </main>
     <div data-include="components/footer.html"></div>
-    <script src="scripts/include.js"></script>
+    <script src="scripts/include.js"></script>        
+    <script src="scripts/survey.js"></script>
 </body>
 </html>
