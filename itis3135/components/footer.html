@@ -19,10 +19,14 @@
     </a>
     <a href="https://jigsaw.w3.org/css-validator/check/referer" id="validation_link_css">
         <img style="border:0;width:88px;height:31px" src="https://jigsaw.w3.org/css-validator/images/vcss" alt="Valid CSS!">        
-    </a>     
+    </a>
+    <a href="https://wave.webaim.org/report#/check?uri=referer" id="validation_accessibility">
+        <img style="border:0;width:88px;height:31px" src="https://eantonio3.github.io/itis3135/images/button_validation_wcag.png" alt="Valid WCAG!">
+    </a>
 </footer>
 <script>
-    let currentPageURL = window.location.href;
+    let currentPageURL = location.href;
     document.getElementById("validation_link_html").setAttribute("href", "https://validator.w3.org/check?uri=" + currentPageURL);
     document.getElementById("validation_link_css").setAttribute("href", "https://jigsaw.w3.org/css-validator/validator?uri=" + currentPageURL);
+    document.getElementById("validation_accessibility").setAttribute("href", "https://wave.webaim.org/report#/" + currentPageURL);
 </script> 
