@@ -38,7 +38,7 @@ table, th, td {
     position: relative;
     margin: auto;
     border: 2px solid black;
-    color: rgb(24, 0, 40);
+    color: rgb(244, 183, 247);
 }
 
 fieldset {
@@ -60,6 +60,12 @@ textarea {
 }
 
 button {    
+    background-color: purple;
+    color: violet;
+    border: solid black 2px;
+}
+
+select {
     background-color: purple;
     color: violet;
     border: solid black 2px;
@@ -176,7 +182,7 @@ figure {
     width: 265px;
 }
 
-.button {
+.calc-btn {
     width: 50px;
     height: 50px;
     margin: 5px;
@@ -194,9 +200,18 @@ figure {
     font-size: 24px;
 }
 
-.button.equal{
+.calc-btn.equal{
     background-color: #f0f0f0;
     width: 250px;
+}
+
+.array-btn {
+    margin: 5px;
+    font-size: 20px;
+    border: solid black 2px;
+    border-radius: 5px;
+    background-color: purple;
+    cursor: pointer;
 }
 
     /* Rule Overrides For Laptops / Small Screens */
