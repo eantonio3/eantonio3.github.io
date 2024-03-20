@@ -41,6 +41,30 @@ table, th, td {
     color: rgb(24, 0, 40);
 }
 
+fieldset {
+    border: 2px solid purple;
+    margin-bottom: 2px;
+    border: solid black 2px;
+}
+
+input {
+    background-color: purple;
+    color: violet;
+    border: solid black 2px;
+}
+
+textarea {
+    background-color: purple;
+    color: violet;
+    border: solid black 2px;
+}
+
+button {    
+    background-color: purple;
+    color: violet;
+    border: solid black 2px;
+}
+
 .table2 {
     margin: auto;
     vertical-align: middle;
@@ -112,26 +136,6 @@ figure {
     text-align: center;
 }
 
-fieldset {
-    border: 2px solid purple;
-    margin-bottom: 2px;
-}
-
-input {
-    background-color: purple;
-    color: violet;
-}
-
-textarea {
-    background-color: purple;
-    color: violet;
-}
-
-button {    
-    background-color: purple;
-    color: violet;
-}
-
 ::placeholder {
     color: violet;
 }
@@ -165,6 +169,35 @@ button {
     right: 0;
 }
 
+.calculator {  
+    padding: 20px;
+    border: 5px solid purple;
+    margin: 20px auto;
+    width: 265px;
+}
+
+.button {
+    width: 50px;
+    height: 50px;
+    margin: 5px;
+    font-size: 20px;
+    border: solid black 2px;
+    border-radius: 5px;
+    background-color: purple;
+    cursor: pointer;
+}
+
+#display {
+    width: 95%;
+    height: 50px;
+    margin-bottom: 10px;
+    font-size: 24px;
+}
+
+.button.equal{
+    background-color: #f0f0f0;
+    width: 250px;
+}
 
     /* Rule Overrides For Laptops / Small Screens */
 
