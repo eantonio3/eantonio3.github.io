@@ -61,7 +61,7 @@ textarea {
 
 button {    
     background-color: purple;
-    color: violet;
+    color: rgb(244, 183, 247);
     border: solid black 2px;
 }
 
@@ -175,7 +175,8 @@ figure {
     right: 0;
 }
 
-.calculator {  
+.calculator { 
+    background-color: violet;
     padding: 20px;
     border: 5px solid purple;
     margin: 20px auto;
@@ -212,6 +213,19 @@ figure {
     border-radius: 5px;
     background-color: purple;
     cursor: pointer;
+}
+
+.projoverview {
+    display: flex;
+    padding: 20px;
+    flex-direction: column;
+    border: 5px solid purple;
+    width: 700px;
+    margin: 20px auto;
+}
+
+.small {
+    font-size: 1rem;
 }
 
     /* Rule Overrides For Laptops / Small Screens */
