@@ -109,6 +109,7 @@
                     <img src="images/diecasts.jpg" alt="My NASCAR LEGO figure with some of my favorite 1:64 diecasts in my collection" style="width: 350px; height: auto">
                     <figcaption><em>My NASCAR LEGO figure with some of my favorite 1:64 diecasts from my collection</em></figcaption>
                 </figure>
+            </div>
         </section>
         <section id="about" class="hidden">
             <h2>About</h2>
@@ -138,7 +139,6 @@
                 <figure>
                     <img src="images/darlington.png" alt="Darlington Raceway 2022 mother's day race" style="width: 500px; height: auto">
                     <figcaption><em>Darlington Raceway 2022 Mother's Day race</em></figcaption>
-                    <figcaption><em>(my mom's first race)</em></figcaption>
                 </figure>
             </div>
         </section>
@@ -202,19 +202,19 @@
             <img style="border:0;width:88px;height:31px" src="https://eantonio3.github.io/itis3135/images/button_validation_wcag.png" alt="Valid WCAG!">
         </a>   
     </footer>
+    <script>
+        let currentPageURL = window.location.href;
+        document.getElementById("validation_link_html").setAttribute("href", "https://validator.w3.org/check?uri=" + currentPageURL);
+        document.getElementById("validation_link_css").setAttribute("href", "https://jigsaw.w3.org/css-validator/validator?uri=" + currentPageURL);
+    </script>
+    <script>
+        function showSection(sectionId) {
+            document.querySelectorAll('main section').forEach(section => {
+                section.classList.add('hidden');
+            });
+            document.getElementById(sectionId).classList.remove('hidden');
+        }
+        showSection('home');
+    </script>
 </body>
-<script>
-    let currentPageURL = window.location.href;
-    document.getElementById("validation_link_html").setAttribute("href", "https://validator.w3.org/check?uri=" + currentPageURL);
-    document.getElementById("validation_link_css").setAttribute("href", "https://jigsaw.w3.org/css-validator/validator?uri=" + currentPageURL);
-</script>
-<script>
-    function showSection(sectionId) {
-        document.querySelectorAll('main section').forEach(section => {
-            section.classList.add('hidden');
-        });
-        document.getElementById(sectionId).classList.remove('hidden');
-    }
-    showSection('home');
-</script>
 </html>
