@@ -25,6 +25,8 @@
         <a href="project_overview.html">Project Overview</a>
         &#128570;
         <a href="arrays.html">Arrays</a>
+        &#128570;
+        <a href="drawing.html">Drawing</a>
     </nav>
     <nav>
         &#128570;
@@ -32,6 +34,18 @@
         &#128570;
         <a href="hobby/index.html">Hobby</a>
         &#128570;
-        <button type="button" class="no-css" onclick="document.querySelectorAll('link[rel=stylesheet]').forEach(function(e){e.setAttribute('href', '');});">No CSS</button>
+        <button type="button" class="no-css" id="toggle">Toggle CSS</button>
     </nav>
+    <script>
+        const cssToggle = document.getElementById('toggle');
+        const cssLink = document.getElementById('styles');
+        
+        cssToggle.addEventListener('click', () => {
+            if(cssLink.hasAttribute('href')){
+                cssLink.removeAttribute('href');
+            } else {
+                cssLink.setAttribute('href', 'styles/default.css')
+            }
+        });
+    </script>
 </header>

@@ -1,17 +1,18 @@
+
 window.onload = function () {
-    let numberButtons = document.querySelectorAll('.button.number');
+    let numberButtons = document.querySelectorAll('.number');
     numberButtons.forEach(button => {
         button.onclick = function () {
             appendToDisplay(button.innerText);
         };
     });
 
-    let decimalButton = document.querySelector('.button.decimal');
+    let decimalButton = document.querySelector('.decimal');
     decimalButton.onclick = function () {
         appendToDisplay('.');
     };
 
-    let clearButton = document.querySelector('.button.clear');
+    let clearButton = document.querySelector('.clear');
     clearButton.onclick = function () {
         if (clearButton.innerText === 'C') {
             clearLastCharacter();
@@ -20,14 +21,14 @@ window.onload = function () {
         }
     };
 
-    let operatorButtons = document.querySelectorAll('.button.operator');
+    let operatorButtons = document.querySelectorAll('.operator');
     operatorButtons.forEach(button => {
         button.onclick = function () {
             appendToDisplay(button.innerText);
         };
     });
 
-    let equalButton = document.querySelector('.button.equal');
+    let equalButton = document.querySelector('.equal');
     equalButton.onclick = function () {
         calculate();
     };
@@ -60,14 +61,14 @@ function appendToDisplay(value) {
 
 function clearDisplay() {
     document.getElementById('display').value = '';
-    document.querySelector('.button.clear').innerText = 'C';
+    document.querySelector('.clear').innerText = 'C';
 }
 
 function clearLastCharacter() {
     let currentValue = document.getElementById('display').value;
     document.getElementById('display').value = currentValue.slice(0, -1);
     if (currentValue.length === 1) {
-        document.querySelector('.button.clear').innerText = 'CE';
+        document.querySelector('.clear').innerText = 'CE';
     }
 }
 
@@ -121,4 +122,3 @@ function calculate() {
     }
     document.getElementById('display').value = 'Error';
 }
-
