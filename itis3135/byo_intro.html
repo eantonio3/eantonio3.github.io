@@ -3,12 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Efren Antonio's Ecstatic Alligator || ITIS3135 || BYO Intro</title>
-    <link rel="stylesheet" href="styles/default.css">
+    <title>Efren Antonio's Ecstatic Alligator || ITIS3135 || Home</title>
+    <link id="styles" rel="stylesheet" href="styles/default.css">
     <link rel="icon" href="./images/favicon.ico">
+    <script src="https://farawayforests.com/cdn/accumulus/accumulus.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 <body>
-    <div data-include="components/header.html"></div>
+    <div id="header"></div>
     <main>
         <h2>BYO Intro</h2>
         <h3>Please fill out the form below so we can build your own intro page:</h3>
@@ -52,8 +54,8 @@
         </form>
         <h3 onclick="reset()">Reset</h3>
     </main>
-    <div data-include="components/footer.html"></div>
-    <script src="scripts/include.js"></script>        
+    <div id="footer"></div>
+    <script src="scripts/jsonscript.js"></script>        
     <script src="scripts/survey.js"></script>
 </body>
 </html>

@@ -3,38 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Efren Antonio's Ecstatic Alligator || ITIS3135 || Calculator</title>
-    <link rel="stylesheet" href="styles/default.css">
+    <title>Efren Antonio's Ecstatic Alligator || ITIS3135 || Home</title>
+    <link id="styles" rel="stylesheet" href="styles/default.css">
     <link rel="icon" href="./images/favicon.ico">
+    <script src="https://farawayforests.com/cdn/accumulus/accumulus.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 <body>
-    <div data-include="components/header.html"></div>
+    <div id="header"></div>
     <main>
         <h2>Calculator</h2>
         <h3>My calculator works and the tutorial was not needed</h3>
         <div class="calculator">
-            <input type="text" id="display" disabled><br>
-            <button class="calc-btn number">7</button>
-            <button class="calc-btn number">8</button>
-            <button class="calc-btn number">9</button>
-            <button class="calc-btn operator">/</button><br>
-            <button class="calc-btn number">4</button>
-            <button class="calc-btn number">5</button>
-            <button class="calc-btn number">6</button>
-            <button class="calc-btn operator">*</button><br>
-            <button class="calc-btn number">1</button>
-            <button class="calc-btn number">2</button>
-            <button class="calc-btn number">3</button>
-            <button class="calc-btn operator">-</button><br>
-            <button class="calc-btn number">0</button>
-            <button class="calc-btn decimal">.</button>
-            <button class="calc-btn clear">C</button>
-            <button class="calc-btn operator">+</button>
-            <button class="calc-btn equal">=</button>
+            <div class="calculator_display">0</div>
+            <div class="calculator_keys">
+                <button>7</button>
+                <button>8</button>
+                <button>9</button>
+                <button class="operator" data-action="divide">÷</button>
+                <button>4</button>
+                <button>5</button>
+                <button>6</button>
+                <button class="operator" data-action="multiply">&times;</button>
+                <button>1</button>
+                <button>2</button>
+                <button>3</button>         
+                <button class="operator" data-action="subtract">-</button>       
+                <button>0</button>
+                <button data-action="decimal">.</button>
+                <button data-action="clear">AC</button>
+                <button class="operator" data-action="add">+</button>
+                <button class="equal" data-action="calculate">=</button>
+
+            </div>
         </div>
     </main>
-    <div data-include="components/footer.html"></div>
-    <script src="scripts/include.js"></script>
+    <div id="footer"></div>
+    <script src="scripts/jsonscript.js"></script>
     <script src="scripts/calculator_try.js"></script>
 </body>
 </html>

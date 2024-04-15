@@ -3,9 +3,9 @@ html {
 }
 body {
     background-color: #c38ce0;
-    text-align: center;
     color: #564154;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align: center;
 }
 
 a {
@@ -19,9 +19,9 @@ a:hover {
 }
 
 main {
-    text-align: left;
     margin-left: 20%;
     margin-right: 20%;
+    text-align: left;
 }
 
 h2 {
@@ -33,42 +33,41 @@ h3 {
 }
 
 table, th, td {
+    border: 2px solid black;
     border-collapse: collapse;
     border-spacing: 3px;
-    position: relative;
-    margin: auto;
-    border: 2px solid black;
     color: rgb(244, 183, 247);
+    margin: auto;
+    position: relative;
 }
 
 fieldset {
-    border: 2px solid purple;
+    border: solid purple 2px;
     margin-bottom: 2px;
-    border: solid black 2px;
 }
 
 input {
     background-color: purple;
-    color: violet;
     border: solid black 2px;
+    color: violet;
 }
 
 textarea {
     background-color: purple;
-    color: violet;
     border: solid black 2px;
+    color: violet;
 }
 
 button {    
     background-color: purple;
-    color: rgb(244, 183, 247);
     border: solid black 2px;
+    color: rgb(244, 183, 247);
 }
 
 select {
     background-color: purple;
-    color: violet;
     border: solid black 2px;
+    color: violet;
 }
 
 .table2 {
@@ -77,8 +76,8 @@ select {
 }
 
 tr {
-    display: table-row;
     border-collapse: separate;
+    display: table-row;
     vertical-align: middle;
 }
 
@@ -90,27 +89,27 @@ tr:nth-child(even) {
     background-color: darkviolet;
 }
 th {
+    background-color: rgb(95, 28, 129);
     display: table-cell;
     text-align: center;
-    background-color: rgb(95, 28, 129);
 }
 
 td {
-    display: table-cell;
     border-collapse: separate;
+    display: table-cell;
     text-align: center;
 }
 .punch {
     height: 300px;
-    width: 300px;
     object-fit: none;
+    width: 300px;
 }
 
 .tab-data {
     display: table;
-    text-align: center;
-    margin: 0 auto;
     list-style-position: outside;
+    margin: 0 auto;
+    text-align: center;
 }
 
 .tab-data li {
@@ -118,24 +117,23 @@ td {
 }
 
 figcaption {
-    text-align: center;
     font-style: italic;
+    text-align: center;
 }
 
 figure {
-    text-align: center;
     display: block;
     margin: 0 auto;
     margin-bottom: 20px;
+    text-align: center;
 }
 
 .form {
-    display: flex;
-    padding: 20px;
-    flex-direction: column;
     border: 5px solid purple;
-    width: 420px;
+    display: flex;
+    flex-direction: column;
     margin: 20px auto;
+    padding: 20px;
 }
 
 .form-caption {
@@ -147,94 +145,138 @@ figure {
 }
 
 .scripts-div {
-    padding: 20px;
+    align-items: center;
+    border: 5px solid purple;
     display: block;
     flex-direction: column;
-    align-items: center;
     justify-content: center;
-    border: 5px solid purple;
     margin: 20px auto;
-    width: 420px;
-}
-.scripts-div h4 {
-    padding: 0;
-    margin: 10px;
+    padding: 20px;
 }
 
 .byo-form {
-    padding: 20px;
-    flex-direction: column;
     border: 5px solid purple;
-    width: 520px;
+    flex-direction: column;
     margin: 20px auto;
+    padding: 20px;
 }
 
 .no-css {
     position: absolute; 
-    top: 0; 
     right: 0;
+    top: 0; 
 }
 
 .calculator { 
     background-color: violet;
-    padding: 20px;
     border: 5px solid purple;
     margin: 20px auto;
+    padding: 20px;
     width: 265px;
 }
 
-.calc-btn {
-    width: 50px;
+.calculator_display {
+    background-color: purple;
+    border: solid black 2px;
+    border-radius: 10px;
+    color: #fff;
+    font-size: 1.5em;
+    padding: .5em .5em;
+    text-align: right;
+}
+
+.calculator_keys {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.calculator_keys > * {
+    flex: 1 0 20%;
+    background-color: purple;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 20px;
     height: 50px;
     margin: 5px;
-    font-size: 20px;
-    border: solid black 2px;
-    border-radius: 5px;
-    background-color: purple;
-    cursor: pointer;
+    position: relative;
+    width: 50px;
 }
 
-#display {
-    width: 95%;
-    height: 50px;
-    margin-bottom: 10px;
-    font-size: 24px;
-}
-
-.calc-btn.equal{
+.equal{
     background-color: #f0f0f0;
-    width: 250px;
+    color: purple;
+    grid-column: -2;
+    grid-row: 2 / span 4;
 }
 
 .array-btn {
-    margin: 5px;
-    font-size: 20px;
+    background-color: purple;
     border: solid black 2px;
     border-radius: 5px;
-    background-color: purple;
     cursor: pointer;
+    font-size: 20px;
+    margin: 5px;
 }
 
 .projoverview {
-    display: flex;
-    padding: 20px;
-    flex-direction: column;
     border: 5px solid purple;
-    width: 700px;
+    display: flex;
+    flex-direction: column;
     margin: 20px auto;
+    padding: 20px;
 }
 
 .small {
     font-size: 1rem;
 }
 
+.eclipse {
+    height: 300px;
+}
+
+.container {
+    position: relative;
+}
+
+.mySlides {
+    display: none;
+}
+
+.prev,
+.next {
+    color: violet;
+    cursor: pointer;
+    font-size: 30px;
+    margin-top: -50px;
+    padding: 16px;
+    position: absolute;
+    top: 40%;
+    width: auto;
+}
+
+.text {
+    background-color: #00000080;
+    color: #f2f2f2;
+    font-size: 1.5rem;
+    text-align: center;
+    width: 100%;
+}
+
+
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+}
+
+
     /* Rule Overrides For Laptops / Small Screens */
 
 @media screen and ( min-width: 981px ) and ( max-width: 1400px ) {
     main { 
-        width: 90%;
         margin: 0 auto;
         max-width: 1200px;
+        width: 90%;
     }
 }
 
@@ -242,20 +284,20 @@ figure {
 
 @media screen and ( min-width: 601px ) and ( max-width: 980px )  {
     main { 
-        width: 80%;
+        font-size: 110%;
         margin: 0 auto;
         max-width: 800px;
-        font-size: 110%;
+        width: 80%;
     }
         
 }
 
     /* Rule Overrides For Mobile Devices */
 @media screen and ( min-width: 370px ) and ( max-width: 600px ) {
-    main {     
-        width: 70%;    
+    main {    
+        font-size: 120%; 
         margin: 0 auto;
         max-width: 600px;
-        font-size: 120%;
+        width: 70%;    
     }
 }

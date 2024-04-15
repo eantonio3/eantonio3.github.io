@@ -1,124 +1,114 @@
+const calculate = (n1, operator, n2) => {
+    const firstNum = parseFloat(n1);
+    const secondNum = parseFloat(n2);
 
-window.onload = function () {
-    let numberButtons = document.querySelectorAll('.number');
-    numberButtons.forEach(button => {
-        button.onclick = function () {
-            appendToDisplay(button.innerText);
-        };
-    });
-
-    let decimalButton = document.querySelector('.decimal');
-    decimalButton.onclick = function () {
-        appendToDisplay('.');
-    };
-
-    let clearButton = document.querySelector('.clear');
-    clearButton.onclick = function () {
-        if (clearButton.innerText === 'C') {
-            clearLastCharacter();
-        } else {
-            clearDisplay();
-        }
-    };
-
-    let operatorButtons = document.querySelectorAll('.operator');
-    operatorButtons.forEach(button => {
-        button.onclick = function () {
-            appendToDisplay(button.innerText);
-        };
-    });
-
-    let equalButton = document.querySelector('.equal');
-    equalButton.onclick = function () {
-        calculate();
-    };
-
-    document.addEventListener('keydown', function (event) {
-        let keyValue = event.key;
-        if (!isNaN(parseInt(keyValue))) {
-            appendToDisplay(keyValue);
-        } else if (keyValue === '.') {
-            appendToDisplay(keyValue);
-        } else if (keyValue === 'Enter') {
-            calculate();
-        } else if (keyValue === 'c' || keyValue === 'C') {
-            clearDisplay();
-        } else if (keyValue === 'Backspace') {
-            // Delete the last character
-            let currentValue = document.getElementById('display').value;
-            document.getElementById('display').value = currentValue.slice(0, -1);
-        } else if (keyValue === 'Delete') {
-            clearDisplay();
-        } else if (['+', '-', '*', '/'].includes(keyValue)) {
-            appendToDisplay(keyValue);
-        }
-    });
-};
-
-function appendToDisplay(value) {
-    document.getElementById('display').value += value;
-}
-
-function clearDisplay() {
-    document.getElementById('display').value = '';
-    document.querySelector('.clear').innerText = 'C';
-}
-
-function clearLastCharacter() {
-    let currentValue = document.getElementById('display').value;
-    document.getElementById('display').value = currentValue.slice(0, -1);
-    if (currentValue.length === 1) {
-        document.querySelector('.clear').innerText = 'CE';
+    if (operator === 'add') {
+        return firstNum + secondNum;
+    }
+    if (operator === 'subtract') {
+        return firstNum - secondNum;
+    }
+    if (operator === 'multiply') {
+        return firstNum * secondNum;
+    }
+    if (operator === 'divide') {
+        return firstNum / secondNum;
     }
 }
 
-function add(a, b) {
-    return a + b;
-}
-
-function subtract(a, b) {
-    return a - b;
-}
-
-function multiply(a, b) {
-    return a * b;
-}
-
-function divide(a, b) {
-    if (b === 0) {
-        throw new Error('Division by zero');
+const getKeyType = key => {
+    const {action} = key.dataset;
+    if (!action) {
+        return 'number';
     }
-    return a / b;
+    if (action === 'add' ||
+        action === 'subtract' ||
+        action === 'multiply' ||
+        action === 'divide') {
+        return 'operator'
+    }
+    return action;
 }
 
-function calculate() {
-    let displayValue = document.getElementById('display').value;
-    let operators = ['+', '-', '*', '/'];
+const createResultString = (key, displayedNum, state) => {
+    const keyContent = key.textContent;
+    const keyType = getKeyType(key);
+    const {firstValue, operator, modValue, previousKeyType} = state;
 
-    for (let i = 0; i < operators.length; i++) {
-        let operator = operators[i];
-        let parts = displayValue.split(operator);
-        if (parts.length === 2) {
-            let a = parseFloat(parts[0]);
-            let b = parseFloat(parts[1]);
-            let result;
-            switch (operator) {
-                case '+':
-                    result = add(a, b);
-                    break;
-                case '-':
-                    result = subtract(a, b);
-                    break;
-                case '*':
-                    result = multiply(a, b);
-                    break;
-                case '/':
-                    result = divide(a, b);
-                    break;
-            }
-            document.getElementById('display').value = result;
-            return;
+    if (keyType === 'number') {
+        return displayedNum === '0' || 
+        previousKeyType === 'operator' || 
+        previousKeyType === 'calculate' ? keyContent : displayedNum + keyContent;
+    }
+    if (keyType === 'decimal') {
+        if (!displayedNum.includes('.')) {
+            return displayedNum + '.';
         }
+        if (previousKeyType === 'operator' || previousKeyType === 'calculate') {
+            return '0';
+        }
+        return displayedNum;
     }
-    document.getElementById('display').value = 'Error';
+    if (keyType === 'operator') {
+        return firstValue && operator && previousKeyType !== 'operator' && previousKeyType !== 'calculate' ? calculate(firstValue, operator, displayedNum) : displayedNum;
+    }
+    if (keyType === 'clear') {
+        return 0;
+    }
+    if (keyType === 'calculate') {
+        return firstValue ? previousKeyType === 'calculate' ? calculate(displayedNum, operator, modValue) : calculate(firstValue, operator, displayedNum) : displayedNum;
+    }
 }
+
+const updateCalculator = (key, calculator, calculatedValue, displayedNum) => {
+    const keyType = getKeyType(key);
+    const {firstValue, operator, modValue, previousKeyType} = calculator.dataset;
+
+    calculator.dataset.previousKeyType = keyType;
+    if (keyType === 'operator') {
+        calculator.dataset.operator = key.dataset.action;
+        calculator.dataset.firstValue = firstValue && operator && previousKeyType !== 'operator' && previousKeyType !== 'calculate' ? calculatedValue : displayedNum;
+    }
+    if (keyType === 'calculate') {
+        calculator.dataset.modValue = firstValue && previousKeyType === 'calculate' ? modValue : displayedNum;
+    }
+    if (keyType === 'clear' && key.textContent === 'AC') {
+        calculator.dataset.firstValue = '';
+        calculator.dataset.modValue = '';
+        calculator.dataset.operator = '';
+        calculator.dataset.previousKeyType = '';
+    }
+}
+
+const updateVisual = (key, calculator) => {
+    const keyType = getKeyType(key);
+    Array.from(key.parentNode.children).forEach(k => k.classList.remove('is-depressed'));
+
+    if (keyType === 'operator') {
+        key.classList.add('is-depressed');
+    }
+    if (keyType === 'clear' && key.textContent !== 'AC') {
+        key.textContent = 'AC';
+    }
+    if (keyType !== 'clear') {
+        const clearButton = calculator.querySelector('[data-action=clear]');
+        clearButton.textContent = 'CE';
+    }
+}
+
+const calculator = document.querySelector('.calculator');
+const display = calculator.querySelector('.calculator_display');
+const keys = calculator.querySelector('.calculator_keys');
+
+keys.addEventListener('click', e => {
+    if (!e.target.matches('button')) {
+        return;
+    }
+    const key = e.target;
+    const displayedNum = display.textContent;
+    const resultString = createResultString(key, displayedNum, calculator.dataset);
+
+    display.textContent = resultString;
+    updateCalculator(key, calculator, resultString, displayedNum);
+    updateVisual(key, calculator);
+})

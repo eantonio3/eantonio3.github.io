@@ -1,0 +1,41 @@
+{
+    "nav1": [
+        {"name": "Home", "url": "index.html"},
+        {"name": "Introduction", "url": "introduction.html"},
+        {"name": "Contract", "url": "contract.html"},
+        {"name": "Tables", "url": "tables.html"},
+        {"name": "Form", "url": "forms.html"},
+        {"name": "Website Eval", "url": "website_evaluations.html"},
+        {"name": "Scripts", "url": "firstscripts.html"},
+        {"name": "About", "url": "about.html"},
+        {"name": "BYO Intro", "url": "byo_intro.html"},
+        {"name": "Calculator", "url": "calculator_try.html"},
+        {"name": "Project Overview", "url": "project_overview.html"},
+        {"name": "Arrays", "url": "arrays.html"},
+        {"name": "Drawing", "url": "drawing.html"},
+        {"name": "Eclipse", "url": "eclipse.html"},
+        {"name": "Slideshow", "url": "slideshow.html"}
+    ],
+    "nav2": [
+        {"name": "CRAPPY", "url": "stuff/CatZ & CarZ.htm"},
+        {"name": "Hobby", "url": "hobby/index.html"},
+        {"name": "Client Project", "url": "project/index.html"}
+    ],
+    "footernav": [
+        {"name": "webpage", "url": "https://webpages.charlotte.edu/eantonio/"},
+        {"name": "GitHub", "url": "https://github.com/eantonio3"},
+        {"name": "GitHub.io", "url": "https://eantonio3.github.io/itis3135/"},
+        {"name": "freecodecamp", "url": "https://www.freecodecamp.org/eantonio3"},
+        {"name": "codeacademy", "url": "https://www.codecademy.com/profiles/eantonio3"},
+        {"name": "LinkedIn", "url": "https://www.linkedin.com/in/eantonio3/"}
+    ],
+    "designedBy": {
+        "name": "Antonio Designs",
+        "url": "antoniodesigns.com/"
+    },
+    "certifications": [
+        {"name": "RWD", "url": "https://www.freecodecamp.org/certification/eantonio3/responsive-web-design"},
+        {"name": "JS", "url": "https://www.freecodecamp.org/certification/eantonio3/javascript-algorithms-and-data-structures-v8"}
+    ],
+    "year": 2024
+}
