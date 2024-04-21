@@ -14,7 +14,9 @@
         {"name": "Arrays", "url": "arrays.html"},
         {"name": "Drawing", "url": "drawing.html"},
         {"name": "Eclipse", "url": "eclipse.html"},
-        {"name": "Slideshow", "url": "slideshow.html"}
+        {"name": "Slideshow", "url": "slideshow.html"},
+        {"name": "Peer Review 1", "url": "review1.html"},
+        {"name": "Peer Review 2", "url": "review2.html"}
     ],
     "nav2": [
         {"name": "CRAPPY", "url": "stuff/CatZ & CarZ.htm"},
