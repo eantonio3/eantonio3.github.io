@@ -4,21 +4,13 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Gallery</title>
-        <link rel="stylesheet" href="clientstyle.css">
+        <link rel="stylesheet" href="styles/clientstyle.css">
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     </head>
     <body>
-        <header>
-            <nav>
-                <img src="images/logo.png" alt="Josie's Styles logo" height="150">
-                <a href="index.html">Home</a>
-                <a href="services.html">Services</a>
-                <a href="gallery.html">Gallery</a>
-                <a href="about.html">About</a>
-                <a href="contact.html">Contact</a>
-            </nav>
-            <h1>Gallery</h1>
-        </header>
+        <div id="header"></div>
         <main>
+            <h1>Gallery</h1>
             <div class="container">
                 <div class="mySlides">
                 <img src="images/blue.PNG" style="width:100%" alt="Blue Full Glam Makeup">
@@ -49,26 +41,17 @@
                 <a class="next" onclick="plusSlides(1)">&#10095;</a>
               </div>
               <div class="thumbnails">
-                <img src="images/blue.PNG" onclick="currentSlide(1)">
-                <img src="images/everyday.PNG" onclick="currentSlide(2)">
-                <img src="images/shorthaircut.PNG" onclick="currentSlide(3)">
-                <img src="images/hairnmakeup.jpg" onclick="currentSlide(4)">
-                <img src="images/nails1.jpg" onclick="currentSlide(5)">
-                <img src="images/nails2.jpg" onclick="currentSlide(6)">
+                <img src="images/blue.PNG" onclick="currentSlide(1)" alt="Blue Full Glam Makeup">
+                <img src="images/everyday.PNG" onclick="currentSlide(2)" alt="Everyday style makeup">
+                <img src="images/shorthaircut.PNG" onclick="currentSlide(3)" alt="Short Shaggy Mullet Haircut">
+                <img src="images/hairnmakeup.jpg" onclick="currentSlide(4)" alt="Full Glam and Haircut Combo">
+                <img src="images/nails1.jpg" onclick="currentSlide(5)" alt="Medium With Glitter Accented Nails">
+                <img src="images/nails2.jpg" onclick="currentSlide(6)" alt="Small With Gemstone and Designed Nails">
               </div>
         </main>
-        <footer>
-            <p>Designed by <a href="antoniodesigns.com/">Antonio Designs</a>, certified in <a href="https://www.freecodecamp.org/certification/eantonio3/responsive-web-design">RWD</a>,<a href="https://www.freecodecamp.org/certification/eantonio3/javascript-algorithms-and-data-structures-v8"> JS</a> &copy;2024</p>
-            <a href="https://validator.w3.org/check?uri=referer" id="validation_link_html"><img style="border:0;width:88px;height:31px" src="https://eantonio3.github.io/itis3135/images/button_validation_html5.png" alt="Valid HTML!"></a>
-            <a href="https://jigsaw.w3.org/css-validator/check/referer" id="validation_link_css"><img style="border:0;width:88px;height:31px" src="https://jigsaw.w3.org/css-validator/images/vcss" alt="Valid CSS!"></a>
-            <a href="https://wave.webaim.org/report#/check?uri=referer" id="validation_accessibility"><img style="border:0;width:88px;height:31px" src="https://eantonio3.github.io/itis3135/images/button_validation_wcag.png" alt="Valid Disabiliy/Accessibility Design!"></a>
-        </footer>
-        <script src="gallery.js"></script>
-        <script>
-            let currentPageURL = location.href;
-            document.getElementById("validation_link_html").setAttribute("href", "https://validator.w3.org/check?uri=" + currentPageURL);
-            document.getElementById("validation_link_css").setAttribute("href", "https://jigsaw.w3.org/css-validator/validator?uri=" + currentPageURL);
-            document.getElementById("validation_accessibility").setAttribute("href", "https://wave.webaim.org/report#/" + currentPageURL);
-        </script>
+        <h4><em>Styles for everyone!</em>💇‍♀️💇‍♂️</h4>
+        <div id="footer"></div>
+        <script src="scripts/gallery.js"></script>
+        <script src="scripts/jsonscript.js"></script>
     </body>
 </html>

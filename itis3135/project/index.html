@@ -4,35 +4,30 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Home</title>
-        <link rel="stylesheet" href="clientstyle.css">
+        <link rel="stylesheet" href="styles/clientstyle.css">
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     </head>
     <body>
-        <header>
-            <nav>
-                <img src="images/logo.png" alt="Josie's Styles logo" height="150">
-                <a href="index.html">Home</a>
-                <a href="services.html">Services</a>
-                <a href="gallery.html">Gallery</a>
-                <a href="about.html">About</a>
-                <a href="contact.html">Contact</a>
-            </nav>
-            <h1>Home</h1>
-        </header>
+        <div id="header"></div>
         <main>
-            <h2>Welcome to Josie's Styles</h2>
-            <p>More information about the website coming soon!</p>
+            <h1>Home</h1>
+            <h2 id="date">.</h2>
+            <h2>🌸MAY SPECIAL🌸</h2>
+            <h2>🌸Get ready for summer with a $60 blowout🌸</h2>
+            <h3>🌸Blowout includes wash, dry, & style and can take up to an hour🌸</h3>
+            <figure>
+                <img src="images/blowout1.jpg" alt="front picture of a blowout">
+                <figcaption>Example of a blowout, from the front</figcaption>
+            </figure>
+            <figure>
+                <img src="images/blowout2.jpg" alt="back picture of a blowout">
+                <figcaption>Example of a blowout, from the back</figcaption>
+            </figure>
+            <h2>🌸Even more deals on Mother's Day May 12, 2024! Stay tuned for more!🌸</h2>
         </main>
-        <footer>
-            <p>Designed by <a href="antoniodesigns.com/">Antonio Designs</a>, certified in <a href="https://www.freecodecamp.org/certification/eantonio3/responsive-web-design">RWD</a>,<a href="https://www.freecodecamp.org/certification/eantonio3/javascript-algorithms-and-data-structures-v8"> JS</a> &copy;2024</p>
-            <a href="https://validator.w3.org/check?uri=referer" id="validation_link_html"><img style="border:0;width:88px;height:31px" src="https://eantonio3.github.io/itis3135/images/button_validation_html5.png" alt="Valid HTML!"></a>
-            <a href="https://jigsaw.w3.org/css-validator/check/referer" id="validation_link_css"><img style="border:0;width:88px;height:31px" src="https://jigsaw.w3.org/css-validator/images/vcss" alt="Valid CSS!"></a>
-            <a href="https://wave.webaim.org/report#/check?uri=referer" id="validation_accessibility"><img style="border:0;width:88px;height:31px" src="https://eantonio3.github.io/itis3135/images/button_validation_wcag.png" alt="Valid Disabiliy/Accessibility Design!"></a>
-        </footer>
-        <script>
-            let currentPageURL = location.href;
-            document.getElementById("validation_link_html").setAttribute("href", "https://validator.w3.org/check?uri=" + currentPageURL);
-            document.getElementById("validation_link_css").setAttribute("href", "https://jigsaw.w3.org/css-validator/validator?uri=" + currentPageURL);
-            document.getElementById("validation_accessibility").setAttribute("href", "https://wave.webaim.org/report#/" + currentPageURL);
-        </script> 
+        <h4><em>Styles for everyone!</em>💇‍♀️💇‍♂️</h4>
+        <div id="footer"></div>
+        <script src="scripts/jsonscript.js"></script>
+        <script src="scripts/date.js"></script>
     </body>
 </html>

@@ -1,0 +1,18 @@
+{
+    "nav": [
+        {"name": "Home", "url": "index.html"},
+        {"name": "Services", "url": "services.html"},
+        {"name": "Gallery", "url": "gallery.html"},
+        {"name": "About", "url": "about.html"},
+        {"name": "Contact", "url": "contact.html"}
+    ],
+    "designedBy": {
+        "name": "Antonio Designs",
+        "url": "antoniodesigns.com/"
+    },
+    "certifications": [
+        {"name": "RWD", "url": "https://www.freecodecamp.org/certification/eantonio3/responsive-web-design"},
+        {"name": "JS", "url": "https://www.freecodecamp.org/certification/eantonio3/javascript-algorithms-and-data-structures-v8"}
+    ],
+    "year": 2024
+}

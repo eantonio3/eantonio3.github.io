@@ -4,36 +4,21 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>About</title>
-        <link rel="stylesheet" href="clientstyle.css">
+        <link rel="stylesheet" href="styles/clientstyle.css">
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     </head>
     <body>
-        <header>
-            <nav>
-                <img src="images/logo.png" alt="Josie's Styles logo" height="150">
-                <a href="index.html">Home</a>
-                <a href="services.html">Services</a>
-                <a href="gallery.html">Gallery</a>
-                <a href="about.html">About</a>
-                <a href="contact.html">Contact</a>
-                <h1>About</h1>
-            </nav>
-        </header>
+        <div id="header"></div>
         <main>
+            <h1>About</h1>
             <h2>Welcome to my website, my name is Josie Upah!</h2>
             <p>Born in Cedar Rapids IA and raised in North Carolina. I come from humble beginnings in Hendersonville, a small town 30 minutes from Asheville, with a mission to bring quality, reliable, and affordable cosmetic services to the Charlotte area that will blow away the competition! I specialize in my makeup services, with it being my area with the most clientelle, and I have since expanded my horizons to include hair services such as cuts and braids, and manicures!</p>
             <h3>I look forward to having you in my chair!</h3>
+            <h4>Phone Number: (828) 206-6609</h4>
+            <h4>Email: josieupah@gmail.com</h4>
         </main>
-        <footer>
-            <p>Designed by <a href="antoniodesigns.com/">Antonio Designs</a>, certified in <a href="https://www.freecodecamp.org/certification/eantonio3/responsive-web-design">RWD</a>,<a href="https://www.freecodecamp.org/certification/eantonio3/javascript-algorithms-and-data-structures-v8"> JS</a> &copy;2024</p>
-            <a href="https://validator.w3.org/check?uri=referer" id="validation_link_html"><img style="border:0;width:88px;height:31px" src="https://eantonio3.github.io/itis3135/images/button_validation_html5.png" alt="Valid HTML!"></a>
-            <a href="https://jigsaw.w3.org/css-validator/check/referer" id="validation_link_css"><img style="border:0;width:88px;height:31px" src="https://jigsaw.w3.org/css-validator/images/vcss" alt="Valid CSS!"></a>
-            <a href="https://wave.webaim.org/report#/check?uri=referer" id="validation_accessibility"><img style="border:0;width:88px;height:31px" src="https://eantonio3.github.io/itis3135/images/button_validation_wcag.png" alt="Valid Disabiliy/Accessibility Design!"></a>
-        </footer>
-        <script>
-            let currentPageURL = location.href;
-            document.getElementById("validation_link_html").setAttribute("href", "https://validator.w3.org/check?uri=" + currentPageURL);
-            document.getElementById("validation_link_css").setAttribute("href", "https://jigsaw.w3.org/css-validator/validator?uri=" + currentPageURL);
-            document.getElementById("validation_accessibility").setAttribute("href", "https://wave.webaim.org/report#/" + currentPageURL);
-        </script> 
+        <h4><em>Styles for everyone!</em>💇‍♀️💇‍♂️</h4>
+        <div id="footer"></div>
+        <script src="scripts/jsonscript.js"></script>
     </body>
 </html>
