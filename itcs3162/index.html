@@ -7,10 +7,44 @@
     <link id="styles" rel="stylesheet" href="default.css">
 </head>
 <body>
+    <header>
+        <h1>ITSC 3162 Portfolio</h1>
+        <nav>
+            <ul>
+                <li><a href="#home" onclick="showSection('home')">Home</a></li>
+                <li><a href="#project1" onclick="showSection('project1')">Project 1</a></li>
+                <li><a href="#project2" onclick="showSection('project2')">Project 2</a></li>
+                <li><a href="#project3" onclick="showSection('project3')">Project 3</a></li>
+                <li><a href="#project4" onclick="showSection('project4')">Project 4</a></li>
+                <li><a href="#group" onclick="showSection('group')">Group Project</a></li>
+            </ul>
+        </nav>
+    </header>
     <main>
-        <h2>Home</h2>
-        <p>Hello, you've made it to my ITCS 3162 Portfolio page</p>
-    </main>
+        <section id="home" class="hidden">
+            <h2>Home</h2>
+            <p>Hello, you've made it to my ITCS 3162 Portfolio page</p>
+        </section>
+        <section id="project1" class="hidden">
+            <h2>Project 1</h2>
+        </section>
+        <section id="project2" class="hidden">
+            <h2>Project 2</h2>
+        </section>
+        <section id="project3" class="hidden">
+            <h2>Project 3</h2>
+        </section>
+        <section id="project4" class="hidden">
+            <h2>Project 4</h2>
+        </section>
 </body>
-
+<script>
+    function showSection(sectionId) {
+        document.querySelectorAll('main section').forEach(section => {
+            section.classList.add('hidden');
+        });
+        document.getElementById(sectionId).classList.remove('hidden');
+    }
+    showSection('home');
+</script>
 </html>

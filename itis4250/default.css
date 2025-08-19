@@ -14,7 +14,7 @@ a {
 
 a:hover {
     color: #564D80;
-    text-decoration: solid;
+    text-decoration: none;
 }
 
 main {
