@@ -88,26 +88,28 @@ a {
   
 /* nav */
 .nav {
-    display: flex;
-    justify-content: space-between;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
+    align-items: center;
     background: var(--main-dpurple);
     box-shadow: 0 2px 0 rgba(0, 0, 0, 0.4);
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    padding: 0 1rem;
+    position: fixed;
+    top: 0;
+    width: 100%;
     z-index: 10;
 }
 
 .nav h1 {
-    margin: 0 auto; 
-    flex-grow: 1;
+    margin: 0;
     text-align: center;
 }
   
 .nav-list {
     display: flex;
-    margin-right: 2rem;
+    grid-column: 3;
+    gap: 1rem;
+    justify-content: flex-end;
 }
   
 .nav-list a {
