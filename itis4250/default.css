@@ -23,3 +23,29 @@ main {
     text-align: center;
 }
 
+nav ul {
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}   
+
+nav ul li {
+    display: inline;
+    margin: 1rem auto;
+}   
+
+nav ul li a {
+    color: #f7f5f4;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    background-color: #1C5253;
+}
+
+nav ul li a:hover {
+    background-color: #010a2d;
+}
+
+.hidden {
+    display: none;
+}
+

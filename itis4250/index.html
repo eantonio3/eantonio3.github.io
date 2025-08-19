@@ -7,12 +7,49 @@
     <link id="styles" rel="stylesheet" href="default.css">
 </head>
 <body>
+    <header>
+        <h1>ITIS 4250 Labs</h1>
+        <nav>
+            <ul>
+                <li><a href="#home" onclick="showSection('home')">Home</a></li>
+                <li><a href="#lab1" onclick="showSection('lab1')">Lab 1</a></li>
+                <li><a href="#lab2" onclick="showSection('lab2')">Lab 2</a></li>
+                <li><a href="#lab3" onclick="showSection('lab3')">Lab 3</a></li>
+                <li><a href="#lab4" onclick="showSection('lab4')">Lab 4</a></li>
+                <li><a href="#lab5" onclick="showSection('lab5')">Lab 5</a></li>
+            </ul>
+        </nav>
+    </header>
     <main>
-        <h2>Home</h2>
-        <p>Hello, you've made it to my ITIS 4250 Labs page</p>
-        <embed src="pdf/ITIS 4250 Lab 1 Report.pdf" type="application/pdf" width="800" height="600">
-    </main>
+        <section id="home" class="hidden">
+            <h2>Home</h2>
+            <p>Hello, you've made it to my ITIS 4250 Labs page</p>
+        </section>
+        <section id="lab1" class="hidden">
+            <h2>Lab 1</h2>
+            <p>In this lab</p>
+            <embed src="pdf/ITIS 4250 Lab 1 Report.pdf" type="application/pdf" width="800" height="600">
+        </section>
+        <section id="lab2" class="hidden">
+            <h2>Lab 2</h2>
+        </section>
+        <section id="lab3" class="hidden">
+            <h2>Lab 3</h2>
+        </section>
+        <section id="lab4" class="hidden">
+            <h2>Lab 4</h2>
+        </section>
+        <section id="lab5" class="hidden">
+            <h2>Lab 5</h2>
+        </section>
 </body>
-
-
+<script>
+    function showSection(sectionId) {
+        document.querySelectorAll('main section').forEach(section => {
+            section.classList.add('hidden');
+        });
+        document.getElementById(sectionId).classList.remove('hidden');
+    }
+    showSection('home');
+</script>
 </html>
