@@ -24,9 +24,8 @@
         {"name": "Client Project", "url": "project/index.html"}
     ],
     "footernav": [
-        {"name": "webpage", "url": "https://webpages.charlotte.edu/eantonio/"},
         {"name": "GitHub", "url": "https://github.com/eantonio3"},
-        {"name": "GitHub.io", "url": "https://eantonio3.github.io/itis3135/"},
+        {"name": "Webpage", "url": "https://eantonio3.github.io"},
         {"name": "freecodecamp", "url": "https://www.freecodecamp.org/eantonio3"},
         {"name": "codeacademy", "url": "https://www.codecademy.com/profiles/eantonio3"},
         {"name": "LinkedIn", "url": "https://www.linkedin.com/in/eantonio3/"}
