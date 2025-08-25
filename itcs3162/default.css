@@ -50,6 +50,10 @@ ol {
     margin: 1rem;
 }
 
+ol li {
+    font-weight: bold;
+}
+
 .hidden {
     display: none;
 }
