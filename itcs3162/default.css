@@ -54,6 +54,10 @@ ol li {
     font-weight: bold;
 }
 
+figcaption {
+    text-align: center;
+}
+
 .hidden {
     display: none;
 }
