@@ -63,11 +63,9 @@ figcaption {
 }
 
 .blog-title {
-  cursor: pointer;
-  color: #362141; /* your theme purple */
-  margin-bottom: 0.5rem;
+    cursor: pointer;
+    color: #362141;
+    margin-bottom: 0.5rem;
+    text-decoration: underline;
 }
 
-.blog-title:hover {
-  text-decoration: underline;
-}
