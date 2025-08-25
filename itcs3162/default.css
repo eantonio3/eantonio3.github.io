@@ -45,6 +45,10 @@ nav ul li a:hover {
     background-color: #15161a;
 }
 
+ol {
+    text-align: left;
+}
+
 .hidden {
     display: none;
 }
