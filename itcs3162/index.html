@@ -28,40 +28,54 @@
         </section>
         <section id="blog" class="hidden">
             <h2>Blog</h2>
-            <h3>Week 2 Blog Discussion</h3>
-            <ol>
-                <li>What is data mining? What are some examples of how data mining can be used?</li>
-                <p>
-                    Data mining is the process of extracting and finding patterns in massive data sets involving methods at the intersection of machine learning, 
-                    statistics, and database systems. Data mining can be used across various sectors, for example: fraud detection in banking/retail, intrusion 
-                    detection in cybersecurity, and inventory management/supply chain efficiency in manufacturing.
-                </p>
-                <li>What are the different steps of the pipeline?</li>
-                <p>
-                    <u>Define goal/problem</u> - clearly identify the project's desired outcome of data mining implementation
-                    <br><u>Collecting/understanding data</u> - collect and explore raw data to discover initial insights
-                    <br><u>Data cleaning/pre-proccessing</u> - clean raw data, integrate/reduce, and transform into the dataset to be used for modeling
-                    <br><u>Modeling data with algorithms</u> - apply various modeling techniques to the prepared data to achieve specific goals
-                    <br><u>Evaluating model's performance</u> - evaluate the results to ensure they meet the project goals, identify if any steps need to be repeated
-                    <br><u>Deployment</u> - implement the models into the real-world enviroment to fullfill the original goal
-                </p>
-                <li>Why is defining the problem first so important?</li>
-                <p>
-                    Defining the problem first is such a crucial step because it sets the direction for the entire data mining process. Without a clear goal,
-                    the data can become overwhelming and can lead to focusing on irrelevant patterns that stray from the objective. A clearly identified goal, 
-                    can determine what data is needed, what features need to be analyzed, which models are used, and what overall goal needs to be achieved. 
-                </p>
-                <li>Why is data cleaning/pre-processing important? What are some aspects of data that need to be cleaned?</li>
-                <p>
-                    Data cleaning/pre-processing is essential to the data mining process because raw data is often incomplete, inconsistent, and may contain errors. 
-                    Poor quality data can often lead to misleading results which can derail a project completely. Some aspects of data that needs to be cleaned include:
-                    missing values, duplicates, errors, outliers, and inconsistent formats such as dates/time.
-                </p>
-                <li>Example of some data understanding/visualizations. What do you like and/or dislike about it?</li>
-                <p>
 
-                </p>
-            </ol>
+            <div class="blog-entry">
+                <h3 class="blog-title" onclick="toggleBlog(this)">Week 2 Blog Discussion</h3>
+                <div class="blog-content hidden">
+                    <ol>
+                        <li>What is data mining? What are some examples of how data mining can be used?</li>
+                        <p>
+                            Data mining is the process of extracting and finding patterns in massive data sets involving methods at the intersection of machine learning, 
+                            statistics, and database systems. Data mining can be used across various sectors, for example: fraud detection in banking/retail, intrusion 
+                            detection in cybersecurity, and inventory management/supply chain efficiency in manufacturing.
+                        </p>
+                        <li>What are the different steps of the pipeline?</li>
+                        <p>
+                            <u>Define goal/problem</u> - clearly identify the project's desired outcome of data mining implementation
+                            <br><u>Collecting/understanding data</u> - collect and explore raw data to discover initial insights
+                            <br><u>Data cleaning/pre-proccessing</u> - clean raw data, integrate/reduce, and transform into the dataset to be used for modeling
+                            <br><u>Modeling data with algorithms</u> - apply various modeling techniques to the prepared data to achieve specific goals
+                            <br><u>Evaluating model's performance</u> - evaluate the results to ensure they meet the project goals, identify if any steps need to be repeated
+                            <br><u>Deployment</u> - implement the models into the real-world enviroment to fullfill the original goal
+                        </p>
+                        <li>Why is defining the problem first so important?</li>
+                        <p>
+                            Defining the problem first is such a crucial step because it sets the direction for the entire data mining process. Without a clear goal,
+                            the data can become overwhelming and can lead to focusing on irrelevant patterns that stray from the objective. A clearly identified goal, 
+                            can determine what data is needed, what features need to be analyzed, which models are used, and what overall goal needs to be achieved. 
+                        </p>
+                        <li>Why is data cleaning/pre-processing important? What are some aspects of data that need to be cleaned?</li>
+                        <p>
+                            Data cleaning/pre-processing is essential to the data mining process because raw data is often incomplete, inconsistent, and may contain errors. 
+                            Poor quality data can often lead to misleading results which can derail a project completely. Some aspects of data that needs to be cleaned include:
+                            missing values, duplicates, errors, outliers, and inconsistent formats such as dates/time.
+                        </p>
+                        <li>Example of some data understanding/visualizations. What do you like and/or dislike about it?</li>
+                        <figure>
+                            <img src="images/data_example.png" alt="data example" style="width:100%">
+                            <figcaption>Phishing Detection Using Machine Learning Visualizer</figcaption>
+                        </figure>
+                        <p>
+                            This ROC curve plot is an example of data understanding and visualization that I made for a previous class. It communicates how different
+                            machine learning models perform in detecting multiple classifiers in a phishing link dataset of over 24,000 entries. I (totally not biased) like
+                            the clearly defined x and y axes, how the different models are plotted on the same chart making performance differences easy to see, and the legend
+                            of the area under curve which is a concise way to summarize performance. I dislike my title, instead of just “ROC Curves for LR, RF, and NN,” it could 
+                            say something like “ROC Curves for Phishing Detection Models” to tie back to the dataset context. I also dislike how technical the visualizer is, it 
+                            may make sense to someone knowledgeable but can be difficult to understand unless paired with an explanation of what the curves actually mean in practice.
+                        </p>
+                    </ol>
+                </div>
+            </div>
         </section>
         <section id="project1" class="hidden">
             <h2>Project 1</h2>

@@ -19,3 +19,8 @@ window.addEventListener('hashchange', loadSectionFromHash);
  
 // Run on first page load
 window.addEventListener('DOMContentLoaded', loadSectionFromHash);
+
+function toggleBlog(titleElement) {
+  const content = titleElement.nextElementSibling;
+  content.classList.toggle("hidden");
+}
