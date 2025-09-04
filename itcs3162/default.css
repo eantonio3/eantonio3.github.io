@@ -69,3 +69,6 @@ figure {
     text-decoration: underline;
 }
 
+#project1 p {
+  text-align: left;
+}
