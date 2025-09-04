@@ -58,6 +58,10 @@ figure {
     text-align: center;
 }
 
+section p {
+  text-align: left;
+}
+
 .hidden {
     display: none;
 }
@@ -67,8 +71,4 @@ figure {
     color: #362141;
     margin-bottom: 0.5rem;
     text-decoration: underline;
-}
-
-.section p {
-  text-align: left;
 }
