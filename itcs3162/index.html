@@ -114,22 +114,28 @@
                         </p>
                         <li>Steps of the machine learning process:</li>
                         <p>
-                            <u>Data collection</u> - gather relevant data for the problem you want to solve
-                            <br><u>Data pre-processing</u> - clean the data, handle missing values, normalize or scale features, and remove noise
-                            <br><u>Data splitting</u> - divide the dataset into training, validation, and testing sets so the model can be trained and evaluated fairly
-                            <br><u>Model selection</u> - choose a suitable algorithm depending on the type of problem and data
-                            <br><u>Model training</u> - feed the training data into the chosen model so it can learn the underlying patterns
-                            <br><u>Model evaluation</u> - test the trained model on unseen data and measure how well it performs
-                            <br><u>Model tuning</u> - adjust hyperparameters and improve features to optimize performance
+                            <u>Data Collection</u> - gather relevant data for the problem you want to solve
+                            <br><u>Data Pre-processing</u> - clean the data, handle missing values, normalize or scale features, and remove noise
+                            <br><u>Data Splitting</u> - divide the dataset into training, validation, and testing sets so the model can be trained and evaluated fairly
+                            <br><u>Model Selection</u> - choose a suitable algorithm depending on the type of problem and data
+                            <br><u>Model Training</u> - feed the training data into the chosen model so it can learn the underlying patterns
+                            <br><u>Model Evaluation</u> - test the trained model on unseen data and measure how well it performs
+                            <br><u>Model Tuning</u> - adjust hyperparameters and improve features to optimize performance
                         </p>
                         <li>How do we evaluate a classification model?</li>
                         <p>
-                            <u>ROC curve</u> - plots the true positive rate against the false positive rate at various classification thresholds. It shows the trade-off between correctly catching 
+                            <u>ROC Curve</u> - plots the true positive rate against the false positive rate at various classification thresholds. It shows the trade-off between correctly catching 
                             positives and incorrectly flagging negatives. A model closer to the top-left corner of the graph is better.
                             <br><u>AUC</u> - the area under the ROC curve. It summarizes the ROC curve into a single value between 0 and 1. A model with an AUC of 0.5 performs no better than random 
                             guessing, while a model with an AUC of 1.0 is perfect.
                         </p>
                         <li>Examples of types of classification algorithms:</li>
+                        <p>
+                            <u>Decision Trees</u> – these models split data into branches based on feature values, like a flowchart of yes/no questions, until reaching a classification. They are easy to 
+                            interpret and visualize.
+                            <br><u>Logistic Regression</u> – despite the name, it’s a classification algorithm. It uses a mathematical function (the logistic function) to estimate probabilities and classify
+                            outcomes into two or more categories.
+                        </p>
                     </ol>
                 </div>
             </div>
@@ -203,6 +209,7 @@
     <script src="scripts.js"></script>
 </body>
 </html>
+
 
 
 
