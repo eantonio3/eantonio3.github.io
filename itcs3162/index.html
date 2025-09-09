@@ -123,6 +123,12 @@
                             <br><u>Model tuning</u> - adjust hyperparameters and improve features to optimize performance
                         </p>
                         <li>How do we evaluate a classification model?</li>
+                        <p>
+                            <u>ROC curve</u> - plots the true positive rate against the false positive rate at various classification thresholds. It shows the trade-off between correctly catching 
+                            positives and incorrectly flagging negatives. A model closer to the top-left corner of the graph is better.
+                            <br><u>AUC</u> - the area under the ROC curve. It summarizes the ROC curve into a single value between 0 and 1. A model with an AUC of 0.5 performs no better than random 
+                            guessing, while a model with an AUC of 1.0 is perfect.
+                        </p>
                         <li>Examples of types of classification algorithms:</li>
                     </ol>
                 </div>
@@ -197,6 +203,7 @@
     <script src="scripts.js"></script>
 </body>
 </html>
+
 
 
 
