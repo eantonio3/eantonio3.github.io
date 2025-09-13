@@ -178,35 +178,38 @@
             </p>
             <h3>Data Visualizations & Findings</h3>
             <p>
-                I used the plotly library tools to help me with my visualizations. For my first two questions I wanted to figure out which countries and industries were the most frequently targeted. For the 
-                countries I used the choropleth map color intensity to represent the amount of attacks across different geographic regions. The data shows that a handful of countries are consistenly targeted 
-                more than others. The U.K had the highest amount of attacks followed by Brazil and India. China had the least amount of attacks with the U.S following closely behind and Germany at third least.
+                I used the plotly library  create visualizations. My first two questions focused on which countries and industries were most frequently targeted. <br><br>
+                For countries, I used a choropleth map with color intensity representing the number of attacks. The data shows that a handful of countries are consistently targeted more than others. The U.K. had the 
+                highest number of attacks, followed by Brazil and India. Surprisingly, China ranked among the lowest, with the U.S. and Germany also reporting relatively fewer incidents. This could suggest underreporting, 
+                stricter data disclosure policies, or attackers shifting toward other geographies.  
                 <figure>
                     <img src="images/country_counts.png" alt="Most Frequently Targeted Countries Heat Map" style="width:75%">
                     <figcaption>Figure 1: Most Frequently Targeted Countries Heat Map</figcaption>
                 </figure>
             </p>
             <p>
-                I used a pie chart to show which industries are targeted the most. Attacks cluster in industries that manage financial assets, personal data, or critical infrastructure. IT, finance, and healthcare 
-                are among the top targeted industries, aligning with real-world trends where attackers pursue high-value data. What surprised me the most was that government and telecommunication sectors were the 
-                least targeted. Overall, the pie graph was fairly even with the IT sector being only 2% higher than the second most highest sector. 
+                For industries, I used a pie chart to show attack distribution. Attacks clustered in industries managing financial assets, personal data, or critical infrastructure. IT, banking, and healthcare were the top 
+                targeted industries, which aligns with real-world patterns where attackers pursue high-value data. What stood out was the relatively low targeting of government and telecommunications, which are typically 
+                high-priority sectors. Another insight is that the pie chart distribution was relatively even. While IT led, it was only 2% higher than finance, suggesting attackers diversify their targets rather than 
+                focusing exclusively on one sector.
                 <figure>
                     <img src="images/industry_counts.png" alt="Most Frequently Targeted Industries Pie Chart" style="width:75%">
                     <figcaption>Figure 2: Most Frequently Targeted Industries Pie Chart</figcaption>
                 </figure>
             </p>
             <p>
-                I used a heat map to highlight how different vulnerabilities are impacting different industries. For instance, zero-day exploits are the biggest concern in the government and IT sectors as seen as the 
-                darkly colored square. This is probably since they are the most critical industries with the most advanced security that hidden exploits are the most effective way to attack. Social engineering is the 
-                biggest concern for banking and education. This shows how attackers tailor methods to exploit specific industry weaknesses.
+                Next, I created a heat map to highlight how different vulnerabilities impact industries. Zero-day exploits stood out in the government and IT sectors, reflecting their reliance on advanced systems 
+                where hidden vulnerabilities are often the most effective. Social engineering dominated in banking and education, reinforcing the idea that human error remains a primary security risk. Interestingly, 
+                weak-passwords were the lowest vulnerability for telecommunications, government, and education, which may be linked to the emphasis of strong passwords in these industries. 
                 <figure>
                     <img src="images/vuln_industry.png" alt="Vulnerabilities Across Industries Heat Map" style="width:75%">
                     <figcaption>Figure 3: Vulnerabilities Across Industries Heat Map</figcaption>
                 </figure>
             </p>
             <p>
-                I used a regular line graph to plot the trends of attack types over time. Attack types evolve over time, ransomware, DDoS, and phishing campaigns are steadily increasing as of recent, suggesting attackers are 
-                sticking to tactics with high return on investment. Meanwhile, older exploit techniques such as man in the middle, malware, and SQL injection are on the decline, possibly due to better patching and awareness.
+                Finally, I used a line graph to track attack type trends over time. The data shows ransomware, phishing, and DDoS steadily increasing, indicating attackers' preference for tactics with high return on investment. 
+                By contrast, older techniques such as SQL injection, malware, and man-in-the-middle attacks are declining, possibly due to stronger patching, improved intrusion detection, and wider awareness. One noteworthy finding 
+                is that phishing and ransomware continue to grow, proving that even with advanced defenses, attackers still exploit human behavior effectively.
                 <figure>
                     <img src="images/attack_trends.png" alt="Trends of Attack Types Over Time" style="width:75%">
                     <figcaption>Figure 4: Trends of Attack Types Over Time</figcaption>
@@ -214,9 +217,11 @@
             </p>
             <h3>Impact</h3>
             <p>
-                Overall, this dataset offers valuable insights into global cybersecurity threats by highlighting trends across industries, countries, and attack types, which can help organizations and policymakers strengthen 
-                defenses and allocate resources more effectively. However, its impact is limited by potential reporting biases. One of these is the limitation to only the top ten countries which excludes major countries in 
-                North America, Africa, Europe, and the Middle East. Also a big issue was dealing with the 
+                This dataset provides valuable insights into global cybersecurity threats, highlighting trends across industries, countries, and attack types. These insights can help organizations and policymakers strengthen defenses, 
+                prioritize training, and allocate resources more effectively. However, the dataset has limitations that may impact its conclusions. For instance, it focuses only on the top ten countries, excluding entire regions such 
+                as Africa and the Middle East, which limits the global perspective. Additionally, many attack sources were marked as “unknown,” making it difficult to trace attacker motivations. Finally, the dataset may reflect reporting 
+                biases, as countries or industries with stricter disclosure laws could appear more targeted than those with weaker transparency. Overall, while the analysis highlights meaningful global patterns, its impact depends on 
+                recognizing these blind spots and avoiding overgeneralization.
             </p>
             <h3>References & Code</h3>
             <ul>
