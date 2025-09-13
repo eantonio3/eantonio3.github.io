@@ -131,9 +131,9 @@
                         </p>
                         <li>Examples of types of classification algorithms:</li>
                         <p>
-                            <u>Decision Trees</u> – these models split data into branches based on feature values, like a flowchart of yes/no questions, until reaching a classification. They are easy to 
+                            <u>Decision Trees</u> - these models split data into branches based on feature values, like a flowchart of yes/no questions, until reaching a classification. They are easy to 
                             interpret and visualize.
-                            <br><u>Logistic Regression</u> – despite the name, it’s a classification algorithm. It uses a mathematical function (the logistic function) to estimate probabilities and classify
+                            <br><u>Logistic Regression</u> - despite the name, it's a classification algorithm. It uses a mathematical function (the logistic function) to estimate probabilities and classify
                             outcomes into two or more categories.
                         </p>
                     </ol>
@@ -191,15 +191,18 @@
                 <figcaption>Dataset Pre-Processing Python Code</figcaption>
             </figure>
             <h3>Data Understanding/Visualization</h3>
-            <p>The first question we </p>
-            <figure>
-                <img src="images/country_counts.png" alt="Most Frequently Targeted Countries Heat Map" style="width:75%">
-                <figcaption>Most Frequently Targeted Countries Heat Map</figcaption>
-            </figure>
-            <figure>
-                <img src="images/industry_counts.png" alt="Most Frequently Targeted Industries Pie Chart" style="width:75%">
-                <figcaption>Most Frequently Targeted Industries Pie Chart</figcaption>
-            </figure>
+            <p>
+                I used the plotly library tools to help me with my visualizations. For my first two questions I wanted to figure out which countries and industries were the most frequently targeted. For the 
+                countries I used the choropleth map color intensity to represent the amount of attacks across different geographic regions. The data shows that a handful of countries are consistenly targeted 
+                more than others. The U.K had the highest amount of attacks followed by Brazil and India. China had the least amount of attacks with the U.S following closely behind and Germany at third least.
+                <figure>
+                    <img src="images/country_counts.png" alt="Most Frequently Targeted Countries Heat Map" style="width:50%">
+                    <figcaption>Most Frequently Targeted Countries Heat Map</figcaption>
+                    <img src="images/industry_counts.png" alt="Most Frequently Targeted Industries Pie Chart" style="width:50%">
+                    <figcaption>Most Frequently Targeted Industries Pie Chart</figcaption>
+                </figure>
+            </p>
+            
             <figure>
                 <img src="images/vuln_industry.png" alt="Vulnerabilities Across Industries Heat Map" style="width:75%">
                 <figcaption>Vulnerabilities Across Industries Heat Map</figcaption>
