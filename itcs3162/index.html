@@ -117,7 +117,8 @@
                         </p>
                         <li>How do we evaluate a classification model?</li>
                         <p>
-                            <u>ROC Curve</u> - plots the true positive rate against the false positive rate at various classification thresholds. It shows the trade-off between correctly catching positives and incorrectly flagging negatives. A model closer to the top-left corner of the graph is better.
+                            <u>ROC Curve</u> - plots the true positive rate against the false positive rate at various classification thresholds. It shows the trade-off between correctly catching positives and incorrectly flagging negatives. A model closer 
+                            to the top-left corner of the graph is better.
                             <br><u>AUC</u> - the area under the ROC curve. It summarizes the ROC curve into a single value between 0 and 1. A model with an AUC of 0.5 performs no better than random guessing, while a model with an AUC of 1.0 is perfect.
                         </p>
                         <li>Examples of types of classification algorithms:</li>
@@ -134,9 +135,16 @@
                     <ol>
                         <li>What are Decision Trees?</li>
                         <p>
-                            A decision tree is a supervised 
+                            Decision Trees are a non-parametric supervised machine learning model used for classification and regression. It functions by creating a tree-like model of decisions and their possible consequences, where internal nodes represent 
+                            features of a dataset, branches represent decision rules based on these features, and leaf nodes represent the final outcome or class label. It starts with one main question at the top (the root), then branches into smaller 
+                            questions based on feature values, and ends with answers at the leaves. This process continues until the tree reaches a final decision. The goal at each step is to split the data into groups that are as similar as possible. 
+                            In classification problems, this means grouping data by class labels. To decide the best split, the algorithm uses measures like Gini impurity or entropy. 
                         </p>
-                        <li>Data - <a href="DDoS Evaluation Dataset (CIC-DDoS2019)" target="_blank">DDoS Evaluation Dataset (CIC-DDoS2019)</a></li>
+                        <li>Data - <a href="https://www.kaggle.com/datasets/aymenabb/ddos-evaluation-dataset-cic-ddos2019" target="_blank">DDoS Evaluation Dataset (CIC-DDoS2019)</a></li>
+                        <p>
+                            For my project, I am using the 2019 Canadian Insitute for Cybersecurity (CIC) DDoS evaluation dataset, which contains detailed network traffic features such as packet length, flow duration, and flag counts. The dataset also includes 
+                            a "Label" column, which is my target variable. This column tells us whether a network flow is “BENIGN” (normal traffic) or "DDos" (attack traffic).
+                        </p>
                         <li>Insights/Impact</li>
                     </ol>
                 </div>
