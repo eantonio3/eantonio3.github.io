@@ -143,9 +143,18 @@
                         <li>Data - <a href="https://www.kaggle.com/datasets/aymenabb/ddos-evaluation-dataset-cic-ddos2019" target="_blank">DDoS Evaluation Dataset (CIC-DDoS2019)</a></li>
                         <p>
                             For my project, I am using the 2019 Canadian Insitute for Cybersecurity (CIC) DDoS evaluation dataset, which contains detailed network traffic features such as packet length, flow duration, and flag counts. The dataset also includes 
-                            a "Label" column, which is my target variable. This column tells us whether a network flow is “BENIGN” (normal traffic) or "DDos" (attack traffic).
+                            a "Label" column, which is my target variable. This column tells us whether a network flow is “BENIGN” (normal traffic) or "DDos" (attack traffic). The classification problem I am interested in solving is whether I can accurately 
+                            distinguish between benign and malicious traffic using Decision Trees. At its simplest, this can be treated as a binary classification task with benign versus attack as the two categories. It can also be extended into a multi-class 
+                            classification problem if I want to identify specific attack types individually.
                         </p>
                         <li>Insights/Impact</li>
+                        <p>
+                            Analyzing this dataset with Decision Trees can provide valuable insights. One of the most important outcomes is understanding which features are most useful in detecting DDoS activity. It would also show how well a Decision Tree model 
+                            can detect malicious traffic in comparison with other machine learning approaches. The potential impact of this work can be both positive and negative. On the positive side, accurate classification of traffic can significantly improve 
+                            cybersecurity by allowing organizations to detect and block malicious activity more effectively. Since Decision Trees are highly interpretable, they would also give analysts a transparent way to explain why certain flows were flagged 
+                            as attacks. However, there are risks as well. If the model produces false positives, legitimate users might be incorrectly blocked, which could reduce trust and usability. False negatives, on the other hand, would allow attacks to slip 
+                            through undetected, undermining security.
+                        </p>
                     </ol>
                 </div>
             </div>
