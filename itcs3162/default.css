@@ -58,6 +58,16 @@ figure {
     text-align: center;
 }
 
+section p {
+    text-align: left;
+}
+
+section ul {
+    text-align: left;
+    list-style-position: inside;
+    margin-left: 0;
+}
+
 .hidden {
     display: none;
 }
@@ -69,12 +79,4 @@ figure {
     text-decoration: underline;
 }
 
-#project1 p {
-    text-align: left;
-}
 
-#project1 ul {
-    text-align: left;
-    list-style-position: inside;
-    margin-left: 0;
-}
