@@ -225,13 +225,13 @@
                 are ~3,000 rows (cybersecurity incidents) with 10 columns/features including: country of origin, year, attack type, target industry, financial loss, number of affected users, attack source, security
                 vulnerability type, defense mechanism used, and incident resolution time. The data was made accessible via <a href="https://www.kaggle.com/datasets/atharvasoundankar/global-cybersecurity-threats-2015-2024" target="_blank">Kaggle</a>
                 and helped with the exploration of trends across geographies, industries, and attack methods. By analyzing this dataset, we can address the critical questions: 
-                 <ul>
+            </p>
+            <ul>
                     <li>Which countries are most frequently targeted?</li>
                     <li>Which industries are most frequently targeted?</li>
                     <li>How do different vulnerabilities impact different industries?</li>
                     <li>What type of attacks are growing or declining?</li>
-                </ul>
-            </p>
+            </ul>
             <p>
                 By answering these questions, the dataset helps identify global hotspots, vulnerable industries, and effective defense practices, contributing to stronger cybersecurity strategies.
             </p>
@@ -311,21 +311,23 @@
                 The dataset used is the CICDDoS2019 dataset, available from the Canadian Institute for Cybersecurity (CIC) and hosted on <a href="https://www.kaggle.com/datasets/aymenabb/ddos-evaluation-dataset-cic-ddos2019" target="_blank">Kaggle</a>
                 This dataset contains captured network traffic representing both benign activity and multiple types of DDoS attacks (UDP flood, TCP SYN flood, HTTP flood, etc.). Each row represents a network flow with a wide range of extracted 
                 features (packet-level and flow-level statistics). Some key features include: 
-                <ul>
-                    <li>Flow Duration - how long the flow lasted</li>                    
-                    <li>Total Forward Packets/Total Backward Packets - number of packets in each direction</li>
-                    <li>Forward Packet Length Max/Mean/Std - size distribution of packets in forward direction</li>
-                    <li>Backward Packet Length Max/Mean/Std - size distribution of packets in backward direction</li>
-                    <li>Flow Bytes/s, Flow Packets/s - throughput features</li>
-                    <li>Label - the target variable (BENIGN or DDoS)</li>
-                </ul>
+            </p>
+            <ul>
+                <li>Flow Duration - how long the flow lasted</li>                    
+                <li>Total Forward Packets/Total Backward Packets - number of packets in each direction</li>
+                <li>Forward Packet Length Max/Mean/Std - size distribution of packets in forward direction</li>
+                <li>Backward Packet Length Max/Mean/Std - size distribution of packets in backward direction</li>
+                <li>Flow Bytes/s, Flow Packets/s - throughput features</li>
+                <li>Label - the target variable (BENIGN or DDoS)</li>
+            </ul>
+            <p>
                 This combination of statistical and behavioral features makes the dataset well-suited for classification tasks in intrusion detection.
             </p>
             <h3>Data Pre-Processing</h3>
             <p>
                 To prepare the dataset for analysis, I began by removing duplicate rows to ensure that the dataset contained only unique traffic flows. Next, I handled missing values by dropping rows with null entries so that the model would not be 
                 affected by incomplete records. I then standardized the column names by converting them to lowercase and replacing spaces with underscores for consistency in coding. Since the Random Forest model requires the target variable to be 
-                numeric, I encoded the categorical labels (Normal or attack types) into numeric classes while leaving the feature columns in their original numeric form. To address the imbalance between benign and attack samples, I applied stratified 
+                numeric, I encoded the categorical labels (Normal or DDoS) into numeric classes while leaving the feature columns in their original numeric form. To address the imbalance between benign and attack samples, I applied stratified 
                 splitting to preserve class proportions in the training and testing sets, ensuring that the model evaluates fairly across all classes. With these preprocessing steps, the dataset was cleaned, structured, and ready for classification.
             </p>
             <h3>Data Visualizations & Findings</h3>
