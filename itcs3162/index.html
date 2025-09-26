@@ -299,6 +299,43 @@
         </section>
         <section id="project2" class="hidden">
             <h2>Project 2 Classification: DDoS Evaluation Dataset (CIC-DDoS2019)</h2>
+            <h3>Problem Introduction</h3>
+            <p>
+                Cyberattacks continue to evolve in both scale and sophistication, and Distributed Denial-of-Service (DDoS) attacks remain one of the most disruptive. A DDoS attack overwhelms a target's resources (such as servers or networks) 
+                by flooding them with massive amounts of malicious traffic, making services unavailable for legitimate users. These attacks pose serious risks to businesses, governments, and individuals, leading to financial loss, reputational 
+                damage, and service downtime. The problem this project addresses is how to detect and classify network traffic as benign or malicious (DDoS), and if malicious, identify which type of DDoS attack it represents. By applying machine 
+                learning classification techniques, we can create models that automatically distinguish between different types of traffic.
+            </p>
+            <h3>Data Introduction</h3>
+            <p>
+                The dataset used is the CICDDoS2019 dataset, available from the Canadian Institute for Cybersecurity (CIC) and hosted on <a href="https://www.kaggle.com/datasets/aymenabb/ddos-evaluation-dataset-cic-ddos2019" target="_blank">Kaggle</a>
+                This dataset contains captured network traffic representing both benign activity and multiple types of DDoS attacks (UDP flood, TCP SYN flood, HTTP flood, etc.). Each row represents a network flow with a wide range of extracted 
+                features (packet-level and flow-level statistics). Some key features include: 
+                <ul>
+                    <li>Flow Duration - how long the flow lasted</li>                    
+                    <li>Total Forward Packets/Total Backward Packets - number of packets in each direction</li>
+                    <li>Forward Packet Length Max/Mean/Std - size distribution of packets in forward direction</li>
+                    <li>Backward Packet Length Max/Mean/Std - size distribution of packets in backward direction</li>
+                    <li>Flow Bytes/s, Flow Packets/s - throughput features</li>
+                    <li>Label - the target variable (BENIGN or DDoS)</li>
+                </ul>
+                This combination of statistical and behavioral features makes the dataset well-suited for classification tasks in intrusion detection.
+            </p>
+            <h3>Data Pre-Processing</h3>
+            <p>
+                 In this step, I cleaned and standardized my dataset to get it ready for analysis. I started by removing any duplicate rows so the data wouldn't have repeated records that could affect results. 
+                Then, I handled missing values by dropping rows with null entries, keeping only complete and reliable data points. Next, I standardized the column names by stripping extra spaces, converting 
+                everything to lowercase, and replacing spaces with underscores. Finally, I used df.info() to review the data types to confirm how each column was stored which helped in making my visualizations.
+            </p>
+            <h3>Data Visualizations & Findings</h3>
+            <h3>Modeling</h3>
+            <p>
+                I will be using Random Forest as my model.
+            </p>
+            <h3>Evaluation</h3>
+            <h3>Storytelling</h3>
+            <h3>Impact</h3>
+            <h3>References & Code</h3>
         </section>
         <section id="project3" class="hidden">
             <h2>Project 3</h2>
