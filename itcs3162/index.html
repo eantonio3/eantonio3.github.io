@@ -328,14 +328,13 @@
             <p>
                 Cyberattacks continue to evolve in both scale and sophistication, and Distributed Denial-of-Service (DDoS) attacks remain one of the most disruptive. A DDoS attack overwhelms a target's resources (such as servers or networks) 
                 by flooding them with massive amounts of malicious traffic, making services unavailable for legitimate users. These attacks pose serious risks to businesses, governments, and individuals, leading to financial loss, reputational 
-                damage, and service downtime. The problem this project addresses is how to detect and classify network traffic as benign or malicious (DDoS), and if malicious, identify which type of DDoS attack it represents. By applying machine 
-                learning classification techniques, we can create models that automatically distinguish between different types of traffic.
+                damage, and service downtime. The problem this project addresses is how to detect and classify network traffic as benign or malicious (DDoS). By applying machine learning classification techniques, we can create models that 
+                automatically distinguish between different types of traffic.
             </p>
             <h3>Data Introduction</h3>
             <p>
-                The dataset used is the CICDDoS2019 dataset, available from the Canadian Institute for Cybersecurity (CIC) and hosted on <a href="https://www.kaggle.com/datasets/aymenabb/ddos-evaluation-dataset-cic-ddos2019" target="_blank">Kaggle</a>
-                This dataset contains captured network traffic representing both benign activity and multiple types of DDoS attacks (UDP flood, TCP SYN flood, HTTP flood, etc.). Each row represents a network flow with a wide range of extracted 
-                features (packet-level and flow-level statistics). Some key features include: 
+                The dataset used is the CICDDoS2019 dataset, available from the Canadian Institute for Cybersecurity (CIC) and hosted on <a href="https://www.kaggle.com/datasets/aymenabb/ddos-evaluation-dataset-cic-ddos2019" target="_blank">Kaggle</a>.
+                This dataset contains captured network traffic representing both benign activity and DDoS attack activity. Each row represents a network flow with a wide range of extracted features (packet-level and flow-level statistics). Some key features include: 
             </p>
             <ul>
                 <li>Flow Duration - how long the flow lasted</li>                    
@@ -355,14 +354,38 @@
                 numeric, I encoded the categorical labels (Normal or DDoS) into numeric classes while leaving the feature columns in their original numeric form. To address the imbalance between benign and attack samples, I applied stratified 
                 splitting to preserve class proportions in the training and testing sets, ensuring that the model evaluates fairly across all classes. With these preprocessing steps, the dataset was cleaned, structured, and ready for classification.
                 <figure>
-                    <img src="images/project2_preprocessing.png" alt="dataset pre-processing" style="width:50%">
+                    <img src="images/project2_preprocessing.png" alt="dataset pre-processing" style="width:75%">
                     <figcaption>Dataset Pre-Processing Python Code</figcaption>
                 </figure>
             </p>
             <h3>Data Visualizations & Findings</h3>
+            <p>
+                I decided to use the matplotlib library to create my visualizations. First, I created a pie chart to show the balance of benign vs DDoS traffic in the dataset. The results indicate a slight majority of benign traffic at 56.7%, while DDoS 
+                traffic still makes up a significant 43.3%. This suggests the dataset is relatively balanced, which is useful for training classification models.
+                <figure>
+                    <img src="images/benign_ddos_piechart.png" alt="benign or ddos piechart" style="width:50%">
+                    <figcaption>Figure 1: Benign vs DDoS Class Distribution Pie Chart</figcaption>
+                </figure>
+            </p>
+            <p>
+                Next, I used a heatmap to visualize correlations among all features. The plot highlights strong positive correlations between several packet-level and flow-level metrics, suggesting redundancy among some variables. At the same time, weaker 
+                and negative correlations show complementary features that may provide unique insights to the model. I also generated the heatmap a few times to further help me clean up the data.
+                <figure>
+                    <img src="images/feature_correlations.png" alt="feature correlation heatmap" style="width:100%">
+                    <figcaption>Figure 2: Feature Correlations Heat Map</figcaption>
+                </figure>
+            </p>
+            <p>
+                Finally, I created a bar chart of Random Forest feature importances revealed that packet length statistics, especially fwd_packet_length_mean and fwd_packet_length_max, were the most influential predictors. Other key features included segment 
+                size, total forward packets, and inter-arrival times. These results emphasize the importance of traffic size and flow patterns in distinguishing between benign and DDoS traffic.
+                <figure>
+                    <img src="images/important_features.png" alt="top 10 important features for Random Forest Classification" style="width:75%">
+                    <figcaption>Figure 3: Top 10 Important Features for Random Forest Classification</figcaption>
+                </figure>
+            </p>
             <h3>Modeling</h3>
             <p>
-                I will be using Random Forest as my model.
+                For this project I decided to build and train a Random Forest machine learning classifier to detect and classify DDoS traffic
             </p>
             <h3>Evaluation</h3>
             <h3>Storytelling</h3>
