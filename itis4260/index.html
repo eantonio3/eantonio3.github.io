@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cybersecurity Analytics (ITIS 4260) Projects</title>
+    <link id="styles" rel="stylesheet" href="default.css">
+</head>
+<body>
+    <header>
+        <h1>Cybersecurity Analytics (ITIS 4260) Projects</h1>
+        <nav>
+            <ul>
+                <li><a href="#home" onclick="showSection('home')">Home</a></li>
+                <li><a href="#project1" onclick="showSection('project1')">Project 1</a></li>
+                <li><a href="#project2" onclick="showSection('project2')">Project 2</a></li>
+                <li><a href="#project3" onclick="showSection('project3')">Project 3</a></li>
+                <li><a href="#ml1" onclick="showSection('ml1')">ML Project 1</a></li>
+                <li><a href="#ml2" onclick="showSection('ml2')">ML Project 2</a></li>
+                <li><a href="#ml3" onclick="showSection('ml3')">ML Project 3</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="home" class="hidden">
+            <h2>Home</h2>
+            <p>
+                Hello, my name is Efren Antonio, and this site showcases my work in cybersecurity analytics through 
+                a series of project reports completed as part of my coursework in ITIS 4260 - Introduction to Security 
+                Analytics at UNC Charlotte.
+            </p>
+            <p>
+                Each lab focuses on security related sense-making and decision-making based on data analytics techniques.
+                opics include:  data cleaning and storage techniques, introduction to R, clustering analysis and statistical 
+                inference for security; log analysis; event correlation, anomaly detection, cyber threat intelligence, and 
+                use of public cybersecurity information resources (OSINT).
+            </p> 
+            <p>
+                My goal with this portfolio is to provide a clear, professional record of my security analysis skills 
+                and methodologies, while also making the material accessible for others who are interested in this field of security.
+            </p>
+        </section>
+        <section id="project1" class="hidden">
+            <h2>Lab 1</h2>
+            <p>
+                
+            </p>
+            <embed src="pdf/ITIS4260 Project 1.pdf" type="application/pdf" width="800" height="600">
+        </section>
+        <section id="project2" class="hidden">
+            <h2>Lab 2</h2>
+            <p>
+                
+            </p>
+            <embed src="pdf/ITIS4260 Project 2.pdf" type="application/pdf" width="800" height="600">
+        </section>
+        <section id="project3" class="hidden">
+            <h2>Lab 3</h2>
+            <p>
+                
+            </p>
+            <embed src="pdf/ITIS4260 DNS Analysis.pdf" type="application/pdf" width="800" height="600">
+        </section>
+        <section id="ml1" class="hidden">
+            <h2>Lab 4</h2>
+            <p>
+                
+            </p>
+            <embed src="pdf/ITIS4260 Project Machine Learning 1.pdf" type="application/pdf" width="800" height="600">
+        </section>
+        <section id="ml2" class="hidden">
+            <h2>Lab 5</h2>
+            <p>
+                
+            </p>
+            <embed src="pdf/ITIS4260 Project Machine Learning 2.pdf" type="application/pdf" width="800" height="600">
+        </section>
+        <section id="ml3" class="hidden">
+            <h2>Lab 5</h2>
+            <p>
+                
+            </p>
+            <embed src="pdf/ITIS4260 Project Machine Learning 3.pdf" type="application/pdf" width="800" height="600">
+        </section>
+</body>
+<script>
+    function showSection(sectionId) {
+        document.querySelectorAll('main section').forEach(section => {
+            section.classList.add('hidden');
+        });
+        document.getElementById(sectionId).classList.remove('hidden');
+    }
+    showSection('home');
+</script>
+</html>
