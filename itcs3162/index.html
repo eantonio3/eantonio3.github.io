@@ -354,6 +354,10 @@
                 affected by incomplete records. I then standardized the column names by converting them to lowercase and replacing spaces with underscores for consistency in coding. Since the Random Forest model requires the target variable to be 
                 numeric, I encoded the categorical labels (Normal or DDoS) into numeric classes while leaving the feature columns in their original numeric form. To address the imbalance between benign and attack samples, I applied stratified 
                 splitting to preserve class proportions in the training and testing sets, ensuring that the model evaluates fairly across all classes. With these preprocessing steps, the dataset was cleaned, structured, and ready for classification.
+                <figure>
+                    <img src="images/project2_preprocessing.png" alt="dataset pre-processing" style="width:50%">
+                    <figcaption>Dataset Pre-Processing Python Code</figcaption>
+                </figure>
             </p>
             <h3>Data Visualizations & Findings</h3>
             <h3>Modeling</h3>
