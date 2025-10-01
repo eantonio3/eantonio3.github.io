@@ -2,7 +2,7 @@ $(document).ready(function() {
     // Header nav
     $.getJSON("components/menu.json", function(data){
         let header = $("<header>");
-        let h1 = $("<h1>").html("Efren Antonio's Ecstatic Alligator &#128570; ITIS 3135");
+        let h1 = $("<h1>").html("Web App Design and Development(ITIS 3135) Webpage");
         let h4 = $("<h4>").html("<em>Cat-Approved Treats and Toys!</em>");
         let nav1 = $("<nav>");
         $.each(data.nav1, function(index, item) {
