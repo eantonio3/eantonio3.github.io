@@ -43,42 +43,76 @@
         <section id="project1" class="hidden">
             <h2>Project 1</h2>
             <p>
-                
+                This project focused on Domain Frequency Analysis using a dataset of the Alexa Top 1 Million websites. I extracted domain 
+                names from the raw URLs and used a custom frequency table with the FreqCounter class to calculate probability-based frequency 
+                scores for each domain. The results were stored in a dataframe that mapped each URL to its corresponding domain and frequency 
+                score, helping identify which domains were common versus uncommon in the dataset. Finally, I filtered the data to highlight 
+                domains with frequency scores below 3.5, uncovering over 148,000 low-frequency domains, which could indicate lesser-known or 
+                potentially suspicious domains relevant for cybersecurity analysis.
             </p>
             <embed src="pdf/ITIS4260 Project 1.pdf" type="application/pdf" width="800" height="600">
         </section>
         <section id="project2" class="hidden">
             <h2>Project 2</h2>
             <p>
-                
+                This project focused on Access Log Analysis by correlating employee activity with organizational resource access policies. I 
+                combined three datasets: access logs, employee details, and department resource mappings to enrich each log entry with employee 
+                names, departments, and resource ownership. By comparing the employee's department with the department of the resource being 
+                accessed, I was able to identify cases where users accessed resources outside their department. The final results revealed over 
+                96,000 cross-department access attempts, all marked as successful, which highlights potential risks of excessive privileges or 
+                insufficient access controls within the organization.
             </p>
             <embed src="pdf/ITIS4260 Project 2.pdf" type="application/pdf" width="800" height="600">
         </section>
         <section id="project3" class="hidden">
             <h2>Project 3</h2>
             <p>
-                
+                This project focused on DNS Log Analysis to identify potentially malicious or unusual domains within network traffic. I enriched 
+                raw DNS query logs by extracting domain names, calculating frequency scores with the FreqCounter class, and checking whether domains 
+                appeared in the Alexa Top 1 Million list. I also mapped resolved IPs back to domains, confirming expected results such as Twitter 
+                resolving to its known IP addresses. Finally, I filtered for suspicious domains - those ending in .net, not found in Alexa's list, 
+                and with low frequency scores - which led to the detection of repeated queries to RT4x78.net, a likely indicator of suspicious or malicious activity.
             </p>
             <embed src="pdf/ITIS4260 DNS Analysis.pdf" type="application/pdf" width="800" height="600">
         </section>
         <section id="ml1" class="hidden">
             <h2>Machine Learning Project 1</h2>
             <p>
-                
+                This project focused on phishing website detection using machine learning, where I applied a Logistic Regression classifier to a 
+                dataset of web content features such as inline scripts, external scripts, event handler counts, script complexity, and library usage. 
+                After preprocessing the data with one-hot encoding and normalization, I trained and tested the model, achieving perfect performance 
+                with 100% accuracy, an ROC-AUC of 1.0, and no false predictions in the confusion matrix. Cross-validation confirmed the consistency 
+                of these results across multiple folds, and feature importance analysis highlighted the influence of variables like library code 
+                count and external script usage. While the results demonstrate that Logistic Regression can effectively distinguish phishing from 
+                legitimate sites, the unusually high accuracy also suggests that the dataset may be highly separable, underscoring the importance 
+                of testing on more diverse data for real-world application.
             </p>
             <embed src="pdf/ITIS4260 Project Machine Learning 1.pdf" type="application/pdf" width="800" height="600">
         </section>
         <section id="ml2" class="hidden">
             <h2>Machine Learning Project 2</h2>
             <p>
-                
+                This project compared two machine learning models - Random Forest and a Neural Network (MLPClassifier) - to classify websites as 
+                either legitimate or phishing based on web content features. Using the same dataset from the previous project, I first trained a 
+                Random Forest with different tree counts, observing that performance improved as the number of trees increased, reaching around 
+                92% accuracy and an AUC of 0.95 with 300 trees. I then trained a Neural Network, adjusting the number of iterations for convergence. 
+                The final model achieved an AUC of 0.86 but showed higher misclassification rates compared to Random Forest. These results highlight 
+                how ensemble methods like Random Forest can achieve strong, stable performance on phishing detection tasks, while Neural Networks 
+                may require additional tuning and more data to generalize effectively.
             </p>
             <embed src="pdf/ITIS4260 Project Machine Learning 2.pdf" type="application/pdf" width="800" height="600">
         </section>
         <section id="ml3" class="hidden">
             <h2>Machine Learning Project 3</h2>
             <p>
-                
+                In this project, I performed a comparative evaluation of three machine learning models - Logistic Regression, Random Forest, and 
+                Neural Networks - to classify phishing versus legitimate websites. After preprocessing the dataset with label encoding and MinMax 
+                normalization, I trained each model and compared their performance using ROC curves and 10-fold cross-validation. The results showed 
+                that Random Forest consistently outperformed the other models, achieving about 93% cross-validation accuracy and an AUC near 0.95, 
+                while Neural Networks reached an AUC of ~0.89 and Logistic Regression ~0.84. Normalization improved the performance of Logistic 
+                Regression and Neural Networks, but had little effect on Random Forest, which remained the most robust model overall. This project 
+                highlighted the trade-offs between interpretability, computational complexity, and predictive power, reinforcing Random Forest's 
+                effectiveness for phishing detection while also showing the potential of Neural Networks with proper tuning.
             </p>
             <embed src="pdf/ITIS4260 Project Machine Learning 3.pdf" type="application/pdf" width="800" height="600">
         </section>
