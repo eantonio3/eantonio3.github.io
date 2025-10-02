@@ -385,12 +385,52 @@
             </p>
             <h3>Modeling</h3>
             <p>
-                For this project I decided to build and train a Random Forest machine learning classifier to detect and classify DDoS traffic
+                For this project I decided to build and train a Random Forest machine learning classifier to distinguish between benign and DDoS traffic flows in the CIC-DDoS2019 dataset. After preprocessing and splitting the dataset into training and testing 
+                sets, the Random Forest model was trained with 100 decision trees (estimators). Random Forest was chosen because it is robust to noisy features, can handle large datasets with many correlated variables, and provides insights into feature importance. 
+                By leveraging ensemble learning, the algorithm combines the predictions of multiple trees, which reduces overfitting and improves generalization performance. This makes Random Forest particularly effective for cybersecurity classification tasks 
+                where the dataset contains both redundant and complementary features. 
             </p>
             <h3>Evaluation</h3>
+            <p>
+                The Random Forest model was evaluated using accuracy, precision, recall, F1-score, confusion matrix, and ROC-AUC score. The model achieved a high overall accuracy, but more importantly, the precision and recall for both benign and DDoS traffic 
+                were well-balanced. This means the model was effective not only at catching attacks but also at minimizing false alarms. The confusion matrix highlights how well the model distinguishes between benign and DDoS traffic. The top-left cell (true 
+                negatives) represents benign flows correctly identified as normal, while the bottom-right (true positives) shows DDoS attacks correctly flagged as malicious. The top-right (false positives) are benign flows mistakenly labeled as attacks, which 
+                could disrupt legitimate users if too high. The bottom-left (false negatives) are missed DDoS attacks, which pose the greatest risk since malicious traffic would slip through undetected. In my results, the majority of predictions fell into the 
+                true positive and true negative cells, showing that the model was both effective at catching DDoS traffic and careful not to over-block normal connections.
+                <figure>
+                    <img src="images/random_forest_evaluation.png" alt="random forest accuracy, precision, recall, F1-score evaluation" style="width:75%">
+                    <figcaption>Figure : Accuracy, Precision, Recall, F1-Score & Confusion Matrix Evaluations</figcaption>
+                </figure>
+            </p>
+            <p>
+                I also used the Receiver Operating Characteristic (ROC) curve to evaluate the classifier's ability to distinguish between benign and DDoS traffic. The ROC curve plots the True Positive Rate (TPR) against the False Positive Rate (FPR) at different 
+                threshold settings. The ROC-AUC curve scored at 1.0 showing that the model has excellent discriminative ability. In practice, this means the model can almost always tell the difference between normal traffic and DDoS traffic. Overall, these results 
+                show that the Random Forest performed very well in detecting DDoS attacks.
+                <figure>
+                    <img src="images/random_forest_evaluation2.png" alt="random forest roc-auc evaluation" style="width:75%">
+                    <figcaption>Figure : ROC Curve Evaluation</figcaption>
+                </figure>
+            </p>
             <h3>Storytelling</h3>
+            <p>
+                The results of this project tell a story about how patterns in network traffic can reveal hidden malicious behavior. By analyzing feature importance, the model highlighted that metrics such as forward packet length mean and maximum, total forward 
+                packets, and inter-arrival times were the strongest indicators of DDoS traffic. This finding makes sense because DDoS attacks often involve abnormal traffic surges and repetitive packet patterns that differ significantly from normal user activity.
+                Through this modeling, I was able to answer the core question: Can machine learning be used to effectively distinguish between benign and malicious traffic? The answer is yes—Random Forest achieved strong predictive accuracy while also providing 
+                insight into which features are most useful for intrusion detection. These insights not only confirm the feasibility of machine learning for cybersecurity but also deepen understanding of how DDoS behavior manifests in flow-level data.
+            </p>
             <h3>Impact</h3>
+            <p>
+                The impact of this project extends beyond technical accuracy. On the positive side, models like this could help organizations strengthen intrusion detection systems, minimize downtime, and protect users from service outages caused by DDoS attacks. 
+                It also contributes to research by identifying the features most useful in distinguishing normal and malicious traffic, which can inform the design of more efficient monitoring tools. However, there are potential negative implications as well. 
+                Over-reliance on automated detection without human oversight could lead to complacency, while biases in the dataset may cause the model to miss new or evolving attack strategies. Additionally, attackers may attempt to reverse-engineer detection 
+                methods and adapt their behaviors to evade them. From an ethical standpoint, it's also important to ensure these systems are used to protect users rather than to monitor them invasively. Ultimately, the project highlights both the promise and 
+                responsibility of applying machine learning to cybersecurity.
+            </p>
             <h3>References & Code</h3>
+            <ul>
+                <li>Iman Sharafaldin, Arash Habibi Lashkari, Saqib Hakak, and Ali A. Ghorbani, "Developing Realistic Distributed Denial of Service (DDoS) Attack Dataset and Taxonomy", IEEE 53rd International Carnahan Conference on Security Technology, Chennai, India, 2019. Kaggle, <a href="https://www.kaggle.com/datasets/aymenabb/ddos-evaluation-dataset-cic-ddos2019" target="_blank">https://www.kaggle.com/datasets/aymenabb/ddos-evaluation-dataset-cic-ddos2019</a></li>
+                <li><a href="pythonlabs/ddos_random_forest_classification" target="_blank">ddos_random_forest_classification.html</a></li>
+            </ul>
         </section>
         <section id="project3" class="hidden">
             <h2>Project 3</h2>
