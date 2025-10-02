@@ -385,10 +385,24 @@
             </p>
             <h3>Modeling</h3>
             <p>
-                For this project I decided to build and train a Random Forest machine learning classifier to distinguish between benign and DDoS traffic flows in the CIC-DDoS2019 dataset. After preprocessing and splitting the dataset into training and testing 
-                sets, the Random Forest model was trained with 100 decision trees (estimators). Random Forest was chosen because it is robust to noisy features, can handle large datasets with many correlated variables, and provides insights into feature importance. 
-                By leveraging ensemble learning, the algorithm combines the predictions of multiple trees, which reduces overfitting and improves generalization performance. This makes Random Forest particularly effective for cybersecurity classification tasks 
-                where the dataset contains both redundant and complementary features. 
+                For this project I decided to build and train a Random Forest machine learning classifier to distinguish between benign and DDoS traffic flows in the CIC-DDoS2019 dataset. Random Forest was chosen because it is robust to noisy features, can handle 
+                large datasets with many correlated variables, and provides insights into feature importance. By leveraging ensemble learning, the algorithm combines the predictions of multiple trees, which reduces overfitting and improves generalization performance. 
+                This makes Random Forest particularly effective for cybersecurity classification tasks where the dataset contains both redundant and complementary features. After preprocessing, I separated features and labels so that X contained all the flow-level 
+                features such as packet lengths, flow duration, and throughput statistics, while y contained the encoded class label (0 = benign, 1 = DDoS). This separation is essential for supervised learning since the model must learn to map input features (X) to 
+                the correct output (y). I then performed a train-test split which divided the dataset into 70% training and 30% testing. The stratify=y parameter ensured that both benign and DDoS classes were proportionally represented in each split, which is especially 
+                important in security data where imbalance can bias the model.
+                <figure>
+                    <img src="images/random_forest_model.png" alt="seperate features (X) and target (y) & train-test split" style="width:75%">
+                    <figcaption>Figure 4: Seperate Features (X) Target (y) & Train-Test Split </figcaption>
+                </figure>
+            </p>
+            <p>
+                After splitting, I initialized and trained the Random Forest classification model. This created an ensemble of 100 decision trees. Each tree was trained on a random subset of the data and features, and predictions were combined using majority 
+                voting. For example, if 60 out of 100 trees predicted “DDoS” while 40 predicted “benign,” the final prediction would be “DDoS.” This ensemble approach reduces overfitting compared to a single decision tree while improving generalization. 
+                <figure>
+                    <img src="images/random_forest_model2.png" alt="run random forest classification model" style="width:75%">
+                    <figcaption>Figure 5: Run Random Forest Classification Model</figcaption>
+                </figure>
             </p>
             <h3>Evaluation</h3>
             <p>
@@ -399,7 +413,7 @@
                 true positive and true negative cells, showing that the model was both effective at catching DDoS traffic and careful not to over-block normal connections.
                 <figure>
                     <img src="images/random_forest_evaluation.png" alt="random forest accuracy, precision, recall, F1-score evaluation" style="width:75%">
-                    <figcaption>Figure : Accuracy, Precision, Recall, F1-Score & Confusion Matrix Evaluations</figcaption>
+                    <figcaption>Figure 6: Accuracy, Precision, Recall, F1-Score & Confusion Matrix Evaluations</figcaption>
                 </figure>
             </p>
             <p>
@@ -408,7 +422,7 @@
                 show that the Random Forest performed very well in detecting DDoS attacks.
                 <figure>
                     <img src="images/random_forest_evaluation2.png" alt="random forest roc-auc evaluation" style="width:75%">
-                    <figcaption>Figure : ROC Curve Evaluation</figcaption>
+                    <figcaption>Figure 7: ROC Curve Evaluation</figcaption>
                 </figure>
             </p>
             <h3>Storytelling</h3>
