@@ -351,8 +351,8 @@
             <p>
                 To prepare the dataset for analysis, I began by removing duplicate rows to ensure that the dataset contained only unique traffic flows. Next, I handled missing values by dropping rows with null entries so that the model would not be 
                 affected by incomplete records. I then standardized the column names by converting them to lowercase and replacing spaces with underscores for consistency in coding. Since the Random Forest model requires the target variable to be 
-                numeric, I encoded the categorical labels (Normal or DDoS) into numeric classes while leaving the feature columns in their original numeric form. To address the imbalance between benign and attack samples, I applied stratified 
-                splitting to preserve class proportions in the training and testing sets, ensuring that the model evaluates fairly across all classes. With these preprocessing steps, the dataset was cleaned, structured, and ready for classification.
+                numeric, I encoded the categorical labels (Normal or DDoS) into numeric classes while leaving the feature columns in their original numeric form. Finally, I dropped any rows with invalid values (infinity or NaN). With these preprocessing 
+                steps, the dataset was cleaned, structured, and ready for classification.
                 <figure>
                     <img src="images/project2_preprocessing.png" alt="dataset pre-processing" style="width:75%">
                     <figcaption>Dataset Pre-Processing Python Code</figcaption>
