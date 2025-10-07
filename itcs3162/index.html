@@ -233,6 +233,35 @@
                     </ol>
                 </div>
             </div>
+            <div class="blog-entry">
+                <h3 class="blog-title" onclick="toggleBlog(this)">Week 8 Blog Discussion</h3>
+                <div class="blog-content hidden">
+                    <ol>
+                        <li>Regression Problem</li>
+                        <p>
+                            Regression is a supervised machine learning method used to model the relationship between a dependent variable (target) and one or more independent variables (features). Specifically, linear regression assumes a linear 
+                            relationship between these variables, represented mathematically as
+                            <br><br><math><mrow><mi>y</mi><mo>=</mo><msub><mi>β</mi><mn>0</mn></msub><mo>+</mo><msub><mi>β</mi><mn>1</mn></msub><msub><mi>x</mi><mn>1</mn></msub><mo>+</mo><mo>...</mo><mo>+</mo><msub><mi>β</mi><mi>n</mi></msub><msub><mi>x</mi><mi>n</mi></msub><mo>+</mo><mi>ε</mi></mrow></math><br><br>
+                            In this formula, <code>y</code> is the predicted value (e.g., financial loss), <code>x₁..xₙ</code> are the feature values, <code>β₀..βₙ</code> are the model coefficients learned from data, and <code>ε</code> is the 
+                            residual error. Estimating the best <code>β</code> values is done byminimizing the sum of squared residuals between the predicted and actual values.
+                        </p>
+                        <li>Data - <a href="https://www.kaggle.com/datasets/atharvasoundankar/global-cybersecurity-threats-2015-2024" target="_blank">Global Cybersecurity Threats (2015-2024) Dataset</a></li>
+                        <p>
+                            The dataset I am using is titled “Global Cybersecurity Threats (2015-2024)” and I used it in Project 1. This dataset contains ~3,000 records of cyberattacks across different countries and industries. It includes both 
+                            categorical and numerical variables describing each incident. For this project, I will focus on a regression problem that predicts the financial loss resulting from cybersecurity incidents. The target variable for my 
+                            regression model is Financial Loss (in Million $), which represents the economic impact of each incident. The features I plan to use as predictors include: attack type, target industry, number of affected users, security
+                            vulnerability type, defense mechanism used, and indicent resolution time. These attributes together describe the scale, nature, and response of each attack, which are likely correlated with its financial cost.
+                        </p>
+                        <li>Impact</li>
+                        <p>
+                            Accurately predicting financial losses from cyber incidents could have several positive outcomes. Organizations and governments could use such models to anticipate potential damages, allocate resources more effectively, 
+                            and improve their cybersecurity preparedness. However, there are also potential drawbacks. If the model's predictions are misinterpreted or biased due to incomplete data, it could lead to unfair assessments of certain 
+                            countries or industries. Additionally, if predictive insights are made public, malicious actors might exploit patterns to target underprepared sectors. Therefore, while predictive regression models in cybersecurity can 
+                            enhance resilience, they must be handled with ethical awareness and data transparency.
+                        </p>
+                    </ol>
+                </div>
+            </div>
         </section>
         <section id="project1" class="hidden">
             <h2>Project 1 Defining a Problem and Data Understanding: Global Cybersecurity Threats (2015-2024)</h2>
