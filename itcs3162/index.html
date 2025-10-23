@@ -523,15 +523,89 @@
             </p>
             <h3>Data Pre-Processing</h3>
             <p>
-
+                To prepare for my regression models, I cleaned and standardized the dataset to ensure consistency and improve data quality before analysis. First, I removed duplicate rows using df.drop_duplicates() to prevent redundant records 
+                from skewing results. Then, I handled missing values with df.dropna(), eliminating incomplete entries that could introduce bias or errors during modeling. Next, I standardized the column names by stripping spaces, converting 
+                them to lowercase, and replacing spaces with underscores for easier reference in code. Finally, I renamed specific columns such as financial_loss_(in_million_$) and incident_resolution_time_(in_hours) to simpler, more 
+                readable names. These steps collectively help create a clean, uniform dataset suitable for analysis and machine learning workflows.
+                <figure>
+                    <img src="images/project3_preprocessing.png" alt="dataset pre-processing" style="width:75%">
+                    <figcaption>Dataset Pre-Processing Python Code</figcaption>
+                </figure>
             </p>
             <h3>Data Visualizations & Findings</h3>
+            <p>
+                I decided to use the matplotlib and seaborn libraries to create my visualizations. The distribution of financial loss appears relatively uniform across different loss levels, suggesting that incidents can cause a wide range of 
+                damages rather than clustering around a specific value. The scatterplot of affected users versus financial loss (on log-log scales) shows no strong linear pattern, but certain attack types such as ransomware and DDoS tend to 
+                cause higher losses even with varying numbers of affected users, indicating that attack severity may depend more on attack type than on user count alone.
+                <figure>
+                    <img src="images/project3_datavisual1.png" alt="financial loss distribution histogram" style="width:75%">
+                    <figcaption>Financial Loss Distribution Histogram</figcaption>
+                </figure>
+                <figure>
+                    <img src="images/project3_datavisual2.png" alt="affected users vs financial loss by attack type scatterplot" style="width:75%">
+                    <figcaption>Affected Users vs Financial Loss by Attack Type Scatterplot</figcaption>
+                </figure>
+            </p>
+            <p>
+                The average financial loss by industry reveals that the government, IT, and banking sectors experience the highest average financial losses, likely due to the sensitivity and value of their data. Meanwhile, industries like 
+                healthcare and education show slightly lower losses but remain significant targets. Finally, the attack type frequency chart shows that DDoS and phishing are the most common attack types from 2015-2024, followed closely by 
+                SQL injection and ransomware, highlighting both the persistence of traditional threats and the financial risks they continue to pose.
+                <figure>
+                    <img src="images/project3_datavisual3.png" alt="average financial loss by industry bargraph" style="width:75%">
+                    <figcaption>Average Financial Loss by Industry Bargraph</figcaption>
+                </figure>
+                <figure>
+                    <img src="images/project3_datavisual4.png" alt="attack type frequency bargraph" style="width:75%">
+                    <figcaption>Attack Type Frequency Bargraph</figcaption>
+                </figure>
+            </p>
             <h3>Experiment 1: Baseline Linear Regression</h3>
             <h4>Modeling</h4>
+            <p>
+                First I started with a baseline linear regression model. The linear regression model aims to predict the financial loss caused by cyber incidents based on a combination of numerical and categorical features. Specifically, 
+                it uses the number of affected users and incident resolution time as numerical predictors, and attack type, target industry, and security vulnerability type as categorical predictors. Before training, the data undergoes 
+                preprocessing: missing numerical values are filled with the median, categorical values are imputed with “missing,” and all categorical features are one-hot encoded to make them suitable for regression analysis. The model 
+                is then trained on a logarithmic transformation of financial loss (log1p(financial_loss)) to reduce skewness and stabilize variance, improving interpretability and potentially mitigating the influence of extreme outliers.
+                <figure>
+                    <img src="images/project3_model1.png" alt="baseline linear regression model code" style="width:75%">
+                    <figcaption>Baseline Linear Regression Model Code</figcaption>
+                </figure>
+            </p>
             <h4>Evaluation</h4>
-            <h3>Experiment 2: Ridge Regression + Feature Engineering</h3>
+            <p>
+                The evaluation metrics and visualizations indicate that the model does not perform well on this dataset. The RMSE score of 0.8714 shows a relatively high prediction error compared to the log-transformed target scale, while the 
+                R² score of -0.0019 suggests that the model explains virtually none of the variance in financial losses performing no better than a simple mean prediction. In the Predicted vs Actual plot, the points are clustered horizontally, 
+                far from the red diagonal line, showing that the model produces nearly constant predictions regardless of the true values. The residual distribution plot further confirms this, as residuals are heavily skewed and not centered 
+                around zero, indicating systematic bias and poor model fit. Overall, this suggests that a simple linear regression is insufficient for capturing the complex, nonlinear relationships in the dataset.
+                <figure>
+                    <img src="images/project3_evaluation1.png" alt="baseline linear regression model results and evaluation" style="width:75%">
+                    <figcaption>Baseline Linear Regression Model Evaluation Results</figcaption>
+                </figure>
+            </p>
+            <h3>Experiment 2: Ridge Regression & Feature Engineering</h3>
             <h4>Modeling</h4>
+            <p>
+                To improve my model I decided to use ridge regression and feature engineering for my second model. The ridge regression model in this project predicts the log-transformed financial loss resulting from cybersecurity incidents. 
+                It uses both numerical and categorical features that capture the scale, duration, and context of each attack. The numeric features include variables such as the logarithmic number of affected users, resolution time, a combined 
+                users-by-time metric, ransomware indicator, and the frequency of attacks within industries. Categorical features like industry type, vulnerability type, year range, and combined attack-industry labels are one-hot encoded to 
+                represent qualitative characteristics. By using RidgeCV with a regularization parameter (alpha = 200), the model aims to reduce overfitting and handle multicollinearity among correlated predictors, improving the stability of 
+                coefficient estimates while balancing bias and variance.
+                <figure>
+                    <img src="images/project3_model2.png" alt="ridge regression/feature engineering model code" style="width:75%">
+                    <figcaption>Ridge Regression & Feature Engineering Model Code</figcaption>
+                </figure>
+            </p>
             <h4>Evaluation</h4>
+            <p>
+                The model's evaluation results show an RMSE of about 0.8707 and an R² score of -0.0001, indicating that the model has very limited predictive power. The scatter plot of predicted versus actual log(financial loss) shows that most 
+                predicted values are concentrated around a narrow range, failing to capture the true variability of the actual financial losses. The near-zero (slightly negative) R² score means that the model performs no better than simply predicting 
+                the mean of the target variable. This suggests that, despite the feature engineering, the relationship between the predictors and financial loss remains weak or non-linear implying that more complex models or additional relevant 
+                features might be necessary to improve predictive performance.
+                <figure>
+                    <img src="images/project3_evaluation2.png" alt="ridge regression/feature engineering model results and evaluation" style="width:75%">
+                    <figcaption>Ridge Regression & Feature Engineering Model Evaluation Results</figcaption>
+                </figure>
+            </p>
             <h3>Experiment 3: Random Forest (Nonlinear Model)</h3>
             <h4>Modeling</h4>
             <h4>Evaluation</h4>
