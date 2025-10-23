@@ -643,7 +643,14 @@
             </p>
             <h3>Conclusion</h3>
             <p>
-
+                Through this project, I learned how different regression approaches vary in their ability to model the financial impacts of cybersecurity incidents. The baseline linear regression model performed poorly, with an R² score near zero, indicating 
+                that simple linear relationships could not capture the complex and nonlinear nature of the data. Even after introducing Ridge Regression with regularization and additional engineered features such as interaction terms, frequency counts, and 
+                logarithmic transformations the model's performance showed only minimal improvement. This revealed that although preprocessing and feature engineering helped reduce noise and multicollinearity, the relationships among variables like attack type, 
+                industry, and financial loss remained too intricate for linear models to represent effectively. In contrast, the tuned Random Forest model demonstrated exceptional performance, achieving an R² score of 0.9895 and a very low RMSE. This success 
+                confirmed that nonlinear models can better capture the complex interactions and nonlinear dependencies present in cybersecurity incident data. The inclusion of engineered features like users_x_time, loss_per_user, and frequency-based metrics 
+                significantly improved predictive accuracy, suggesting that the scale and context of incidents matter more than any single variable. Overall, I learned that preprocessing steps such as log transformations, categorical encoding, and feature 
+                creation are critical foundations for modeling, but selecting the right model architecture is equally important. The project reinforced how iterative experimentation, careful data preparation, and model tuning together lead to meaningful 
+                insights in predictive cybersecurity analytics.
             </p>
             <h3>References & Code</h3>
             <ul>
