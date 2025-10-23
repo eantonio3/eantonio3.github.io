@@ -606,9 +606,34 @@
                     <figcaption>Ridge Regression & Feature Engineering Model Evaluation Results</figcaption>
                 </figure>
             </p>
-            <h3>Experiment 3: Random Forest (Nonlinear Model)</h3>
+            <h3>Experiment 3: Tuned Random Forest (Nonlinear Model)</h3>
             <h4>Modeling</h4>
+            <p>
+                For my final model, I decided to try a non-linear approach to my problem with a tuned random forest model. The tuned random forest regressor predicts the log-transformed financial loss caused by cybersecurity incidents. I used both 
+                numerical and categorical data, and I engineered several new features to capture deeper relationships within the dataset. For example, I created interaction terms like users_x_time and ratio-based features like loss_per_user and 
+                users_per_time to better represent the impact of incidents. I also applied logarithmic transformations to reduce skewness and added frequency-based metrics to show how often certain attack and industry combinations occur. To make 
+                sure the data was properly prepared, I used pipelines for preprocessing—imputing missing values, scaling numeric data, and one-hot encoding categorical variables. I then optimized the Random Forest model's parameters using 
+                RandomizedSearchCV with cross-validation to find the best-performing configuration for prediction accuracy.
+                <figure>
+                    <img src="images/project3_model3.1.png" alt="tuned random forest model features" style="width:75%">
+                    <figcaption>Tuned Random Forest Model Features</figcaption>
+                </figure>
+                <figure>
+                    <img src="images/project3_model3.2.png" alt="tuned random forest model code" style="width:75%">
+                    <figcaption>Tuned Random Forest Model Code</figcaption>
+                </figure>
+            </p>
             <h4>Evaluation</h4>
+            <p>
+                When I evaluated my tuned model, I found that it performed extremely well. The RMSE was around 0.0891, which shows that my model's prediction errors are very small on the log scale. The R² score of 0.9895 means that my model explains 
+                nearly 99% of the variance in the financial loss data, which is a strong indicator of accuracy and reliability. In the scatterplot of predicted versus actual values, I noticed that most of the points align closely with the red diagonal 
+                line—meaning the model's predictions are almost identical to the real values. This close alignment and the high performance metrics tell me that my model is very effective at predicting the log of financial losses in cybersecurity 
+                incidents based on the engineered features I included.
+                <figure>
+                    <img src="images/project3_evaluation3.png" alt="random forest model results and evaluation" style="width:75%">
+                    <figcaption>Ridge Forest Model Evaluation Results</figcaption>
+                </figure>
+            </p>
             <h3>Impact</h3>
             <p>
                 Accurately predicting financial losses from cyber incidents could have several positive outcomes. Organizations and governments could use such models to anticipate potential damages, allocate resources more effectively, and improve their 
@@ -617,6 +642,9 @@
                 awareness and data transparency.
             </p>
             <h3>Conclusion</h3>
+            <p>
+                
+            </p>
             <h3>References & Code</h3>
             <ul>
                 <li>Soundankar, Atharva. Global Cybersecurity Threats (2015-2024). 2025, Kaggle, <a href="https://www.kaggle.com/datasets/atharvasoundankar/global-cybersecurity-threats-2015-2024" target="_blank">https://www.kaggle.com/datasets/atharvasoundankar/global-cybersecurity-threats-2015-2024</a></li>
