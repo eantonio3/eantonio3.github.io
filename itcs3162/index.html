@@ -689,12 +689,36 @@
             </ul>
         </section>
         <section id="project4" class="hidden">
-            <h2>Project 4 Clustering: Australian Centre for Cyber Security Dataset (UNSW-NB15)</h2>
+            <h2>Project 4 Clustering: Australian Centre for Cyber Security Network Intrusion Dataset (UNSW-NB15)</h2>
             <h3>Problem Introduction</h3>
+            <p>
+                As modern networks face ever more diverse attacks, defenders need tools that surface patterns in traffic without relying on labelled signatures. While supervised learning approaches can help classify known attacks, many cyber incidents still 
+                evade detection because they represent new or previously unseen behaviors. In such cases, unsupervised learning methods like clustering can be valuable for uncovering hidden patterns in network data. For this project, I aim to use clustering 
+                techniques to analyze and group network traffic behaviors based on their intrinsic similarities. By doing so, I hope to identify distinct categories of network activity, such as normal traffic, denial-of-service (DoS) attacks, or port scans, 
+                without relying on predefined attack labels. The central question guiding this project is: Can clustering algorithms reveal meaningful groupings within real-world network traffic that correspond to normal and malicious behavior? This approach 
+                simulates the foundation of an anomaly-based intrusion detection system, where understanding these clusters could enhance network monitoring and early threat detection.
+            </p>
             <h3>Data Introduction</h3>
-            <a href="https://research.unsw.edu.au/projects/unsw-nb15-dataset">Dataset</a>
+            <p>
+                The dataset used for this project is the UNSW-NB15 dataset, which is publicly available through the <a href="https://research.unsw.edu.au/projects/unsw-nb15-dataset">UNSW webpage</a> This dataset was created by the Australian Centre for Cyber 
+                Security (ACCS) and is widely used in research on intrusion detection systems. It contains modern network traffic data that simulate both normal and malicious activity. The dataset includes over 2 million network connections with 49 features 
+                representing various network attributes. Some of the most relevant features for this analysis include src_bytes (source bytes sent), dst_bytes (destination bytes received), dur (connection duration), sload (source bits per second), dload 
+                (destination bits per second), ct_srv_src (number of connections to the same service from the same source), and ct_state_ttl (number of connections with the same state and time-to-live). Together, these features describe the behavior of 
+                network sessions and make it possible to detect patterns associated with different types of attacks or benign traffic.
+
+            </p>
             <h3>Clustering</h3>
+            <p>
+                Clustering is an unsupervised machine learning technique that groups data points based on their similarity or distance in feature space. Unlike supervised methods, clustering does not require labeled data. Instead, it relies on mathematical 
+                measures like Euclidean distance to form clusters where members are more similar to each other than to members of other groups. One of the most common clustering algorithms is K-Means, which partitions the dataset into k clusters by minimizing 
+                the variance within each cluster. It iteratively assigns data points to the nearest cluster centroid and recalculates centroids until convergence. Another common approach, Agglomerative Hierarchical Clustering, builds a hierarchy of clusters by 
+                progressively merging the closest pairs based on a chosen linkage criterion, such as complete or average linkage. For this project, I will primarily use K-Means due to its efficiency and interpretability, but I will also compare results with 
+                hierarchical clustering to explore whether the patterns are consistent across methods.
+            </p>
             <h3>Data Pre-Processing</h3>
+            <p>
+                
+            </p>
             <h3>Data Visualizations & Findings</h3>
             <h3>Modeling</h3>
             <h3>Storytelling</h3>
