@@ -716,10 +716,10 @@
             </p>
             <h3>Data Pre-Processing</h3>
             <p>
-                Before applying clustering techniques, I prepared and standardized the dataset to ensure optimal model performance. First, I removed duplicate records to eliminate redundancy, then restricted the dataset to numeric features since clustering 
-                algorithms require quantitative inputs. The target label was dropped to maintain an unsupervised learning setup. Next, missing values were removed to prevent incomplete records from distorting PCA and clustering results. I standardized all 
-                numerical variables using z-score normalization so that every feature contributed equally to distance-based calculations. Finally, I examined correlations between variables to highlighted several pairs of highly correlated features, guiding 
-                later dimensionality reduction steps.
+                Before applying clustering techniques, I prepared and standardized the dataset to ensure that the dataset was clean, consistent, and suitable for clustering. I first removed duplicate entries to prevent redundant records from skewing similarity 
+                calculations. Then, I filtered the dataset to retain only numerical columns since algorithms like K-Means and PCA operate on continuous numerical values. Non-numeric data such as categorical attack types were excluded to focus the clustering on 
+                quantitative incident metrics. Missing values were dropped to maintain data integrity, and all features were standardized using StandardScaler() to ensure each variable contributed equally to distance-based clustering. Finally, I examined feature 
+                correlations to identify and manage redundancy, setting the foundation for a stable PCA transformation.
                 <figure>
                     <img src="images/project4_preprocessing.png" alt="dataset pre-processing" style="width:75%">
                     <figcaption>Dataset Pre-Processing Python Code</figcaption>
@@ -727,10 +727,18 @@
             </p>
             <h3>Data Visualizations & Findings</h3>
             <p>
-
+                To better understand the relationships among features, I created a correlation heatmap that revealed multiple high interdependencies across variables. Applying Principal Component Analysis (PCA) helped reduce dimensionality while preserving 
+                variance, allowing clearer visualization of the dataset's structure. The explained variance plot indicated that the first three components captured most of the meaningful variance, making them suitable for clustering visualization. These 
+                visualizations demonstrated that while some features were correlated, the overall dataset exhibited complex and multidimensional relationships, ideal for unsupervised learning methods like K-Means and hierarchical clustering.
             </p>
             <h3>Modeling</h3>
+            <p>
+                
+            </p>
             <h3>Storytelling</h3>
+            <p>
+
+            </p>
             <h3>Impact</h3>
             <p>
                 This clustering analysis provides valuable insights into the underlying structure of cybersecurity threat data. By revealing hidden groupings among thousands of cybersecurity events, organizations can better prioritize defenses and allocate 
