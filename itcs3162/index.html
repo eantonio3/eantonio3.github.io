@@ -727,7 +727,11 @@
             </p>
             <h3>Data Visualizations & Findings</h3>
             <p>
-                
+                The correlation heatmaps provided valuable insights into relationships between features in the UNSW-NB15 dataset. The first heatmap revealed strong correlations among traffic-related variables such as spkts, dpkts, sbytes, and dbytes, indicating 
+                that larger data transfers are often associated with higher packet counts. Temporal and rate-based features like dur and sload also showed moderate correlations with traffic volume, highlighting how these variables collectively describe network 
+                throughput. The second heatmap, which focuses on correlations of 0.8 or higher, identified tightly connected groups of features such as ct_srv_src, ct_dst_ltm, and ct_state_ttl, which often represent repetitive or automated connection behavior. 
+                Recognizing these high correlations helped identify redundant variables and informed the decision to apply dimensionality reduction techniques like PCA. Overall, these visualizations guided feature selection and ensured the clustering algorithms 
+                operated on distinct, meaningful attributes, improving the interpretability of network behavior groupings.
                 <figure>
                     <img src="images/project4_datavisual1.png" alt="feature correlation heat map" style="width:50%">
                     <figcaption>Figure 1: Feature Correlation Heat Map</figcaption>
@@ -741,7 +745,7 @@
             <p>
                 For this project I decided to use two clusterting models, K-Means and Agglomerative Clustering. K-Means was chosen for its scalability and efficiency with large datasets, making it suitable for the thousands of cyber incident records. I determined 
                 the optimal number of clusters using the Elbow Method, which plots inertia against the number of clusters. The curve indicated two clusters provided a reasonable balance between simplicity and variance reduction.
-                
+
 To complement this, I used Agglomerative Clustering, a hierarchical method that builds nested clusters and allows visualization through a dendrogram. This approach provides interpretability and insight into the relationships between clusters at different similarity levels. The trade-off is computational cost—it’s more suitable for smaller datasets, so I used a 1,000-record sample.
 
 Overall, K-Means offered faster computation and clearer cluster boundaries, while Agglomerative Clustering revealed hierarchical relationships among incidents, offering richer interpretive value at the cost of scalability.
