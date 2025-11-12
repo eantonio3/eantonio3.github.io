@@ -743,12 +743,30 @@
             </p>
             <h3>Modeling</h3>
             <p>
-                For this project I decided to use two clusterting models, K-Means and Agglomerative Clustering. K-Means was chosen for its scalability and efficiency with large datasets, making it suitable for the thousands of cyber incident records. I determined 
-                the optimal number of clusters using the Elbow Method, which plots inertia against the number of clusters. The curve indicated two clusters provided a reasonable balance between simplicity and variance reduction.
-
-To complement this, I used Agglomerative Clustering, a hierarchical method that builds nested clusters and allows visualization through a dendrogram. This approach provides interpretability and insight into the relationships between clusters at different similarity levels. The trade-off is computational cost—it’s more suitable for smaller datasets, so I used a 1,000-record sample.
-
-Overall, K-Means offered faster computation and clearer cluster boundaries, while Agglomerative Clustering revealed hierarchical relationships among incidents, offering richer interpretive value at the cost of scalability.
+                For this project, I first applied the K-Means clustering algorithm because it is computationally efficient and works well with large datasets like UNSW-NB15. To determine the optimal number of clusters, I used the Elbow Method, which plots the 
+                inertia (within-cluster sum of squares) against the number of clusters. As seen in the Elbow plot, there is a clear “elbow” at K = 2, suggesting that two clusters capture most of the structure in the data without unnecessary complexity. This 
+                result likely represents a natural division between normal and abnormal network behaviors. After selecting K = 2, I visualized the clusters using PCA-reduced features, which helped project the high-dimensional data into a two-dimensional space. 
+                The visualization shows two distinct groupings, where one large, dense cluster corresponds to typical network activity, while a smaller, more isolated cluster may represent potential attack traffic or unusual connections. Overall, K-Means provided 
+                a fast and interpretable way to segment network sessions into meaningful behavioral categories.
+                <figure>
+                    <img src="images/project4_model1.1.png" alt="elbow method for optimal k graph" style="width:75%">
+                    <figcaption>Figure 3: Elbow Method for Optimal K Graph</figcaption>
+                </figure>
+                <figure>
+                    <img src="images/project4_model1.2.png" alt="k-means clustering with pca-reduced data visualizations" style="width:50%">
+                    <figcaption>Figure 4: K-Means Clustering with PCA-Reduced Data Visualizations<figcaption>
+                </figure>
+            </p>
+            <p>
+                To complement K-Means, I also implemented Agglomerative Hierarchical Clustering to explore how network events group together at varying similarity levels. Unlike K-Means, this model does not require specifying the number of clusters beforehand but 
+                instead builds a hierarchy by repeatedly merging the closest data points. Due to its computational intensity, I used a sample of 1,000 records to create the dendrogram and visualize hierarchical relationships among clusters. The dendrogram clearly 
+                shows how individual data points combine into larger clusters as the distance threshold increases, providing a detailed view of nested structures in the data. When visualized in PCA space, the Agglomerative model produced results consistent with 
+                K-Means, forming roughly two to three main cluster regions. However, it also revealed sub-clusters within these groups, offering deeper insight into nuanced network behaviors, such as variations among attack types. While more computationally 
+                expensive, Agglomerative Clustering adds valuable interpretability and helps identify layered relationships that might be overlooked by partition-based methods.
+                <figure>
+                    <img src="images/project4_model2.png" alt="agglomerative clustering with pca-reduced data and dendogram" style="width:50%">
+                    <figcaption>Figure 5: Agglomerative Clustering with PCA-Reduced Data and Dendrogram<figcaption>
+                </figure>
             </p>
             <h3>Storytelling</h3>
             <p>
