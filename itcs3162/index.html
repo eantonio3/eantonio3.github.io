@@ -727,13 +727,24 @@
             </p>
             <h3>Data Visualizations & Findings</h3>
             <p>
-                To better understand the relationships among features, I created a correlation heatmap that revealed multiple high interdependencies across variables. Applying Principal Component Analysis (PCA) helped reduce dimensionality while preserving 
-                variance, allowing clearer visualization of the dataset's structure. The explained variance plot indicated that the first three components captured most of the meaningful variance, making them suitable for clustering visualization. These 
-                visualizations demonstrated that while some features were correlated, the overall dataset exhibited complex and multidimensional relationships, ideal for unsupervised learning methods like K-Means and hierarchical clustering.
+                
+                <figure>
+                    <img src="images/project4_datavisual1.png" alt="feature correlation heat map" style="width:50%">
+                    <figcaption>Figure 1: Feature Correlation Heat Map</figcaption>
+                </figure>
+                <figure>
+                    <img src="images/project4_datavisual2.png" alt="Feature Correlation of .8 or Higher Heat Map" style="width:50%">
+                    <figcaption>Figure 2: Feature Correlation of .8 or Higher Heat Map</figcaption>
+                </figure>
             </p>
             <h3>Modeling</h3>
             <p>
+                For this project I decided to use two clusterting models, K-Means and Agglomerative Clustering. K-Means was chosen for its scalability and efficiency with large datasets, making it suitable for the thousands of cyber incident records. I determined 
+                the optimal number of clusters using the Elbow Method, which plots inertia against the number of clusters. The curve indicated two clusters provided a reasonable balance between simplicity and variance reduction.
                 
+To complement this, I used Agglomerative Clustering, a hierarchical method that builds nested clusters and allows visualization through a dendrogram. This approach provides interpretability and insight into the relationships between clusters at different similarity levels. The trade-off is computational cost—it’s more suitable for smaller datasets, so I used a 1,000-record sample.
+
+Overall, K-Means offered faster computation and clearer cluster boundaries, while Agglomerative Clustering revealed hierarchical relationships among incidents, offering richer interpretive value at the cost of scalability.
             </p>
             <h3>Storytelling</h3>
             <p>
