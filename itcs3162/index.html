@@ -524,7 +524,7 @@
             <h3>References & Code</h3>
             <ul>
                 <li>Iman Sharafaldin, Arash Habibi Lashkari, Saqib Hakak, and Ali A. Ghorbani, "Developing Realistic Distributed Denial of Service (DDoS) Attack Dataset and Taxonomy", IEEE 53rd International Carnahan Conference on Security Technology, Chennai, India, 2019. Kaggle, <a href="https://www.kaggle.com/datasets/aymenabb/ddos-evaluation-dataset-cic-ddos2019" target="_blank">https://www.kaggle.com/datasets/aymenabb/ddos-evaluation-dataset-cic-ddos2019</a></li>
-                <li><a href="pythonlabs/ddos_random_forest_classification" target="_blank">ddos_random_forest_classification.html</a></li>
+                <li><a href="pythonlabs/ddos_random_forest_classification.html" target="_blank">ddos_random_forest_classification.html</a></li>
             </ul>
         </section>
         <section id="project3" class="hidden">
@@ -721,7 +721,7 @@
                 quantitative incident metrics. Missing values were dropped to maintain data integrity, and all features were standardized using StandardScaler() to ensure each variable contributed equally to distance-based clustering. Finally, I examined feature 
                 correlations to identify and manage redundancy, setting the foundation for a stable PCA transformation.
                 <figure>
-                    <img src="images/project4_preprocessing.png" alt="dataset pre-processing" style="width:75%">
+                    <img src="images/project4_preprocessing.png" alt="dataset pre-processing" style="width:50%">
                     <figcaption>Dataset Pre-Processing Python Code</figcaption>
                 </figure>
             </p>
@@ -743,13 +743,13 @@
             </p>
             <h3>Modeling</h3>
             <p>
-                For this project, I first applied the K-Means clustering algorithm because it is computationally efficient and works well with large datasets like UNSW-NB15. To determine the optimal number of clusters, I used the Elbow Method, which plots the 
-                inertia (within-cluster sum of squares) against the number of clusters. As seen in the Elbow plot, there is a clear “elbow” at K = 2, suggesting that two clusters capture most of the structure in the data without unnecessary complexity. This 
-                result likely represents a natural division between normal and abnormal network behaviors. After selecting K = 2, I visualized the clusters using PCA-reduced features, which helped project the high-dimensional data into a two-dimensional space. 
-                The visualization shows two distinct groupings, where one large, dense cluster corresponds to typical network activity, while a smaller, more isolated cluster may represent potential attack traffic or unusual connections. Overall, K-Means provided 
-                a fast and interpretable way to segment network sessions into meaningful behavioral categories.
+                For this project, I first applied the K-Means clustering algorithm because it is computationally efficient and works well with large datasets. To determine the optimal number of clusters, I used the Elbow Method, which plots the inertia (within-cluster 
+                sum of squares) against the number of clusters. As seen in the Elbow plot, there is a clear “elbow” at K = 2, suggesting that two clusters capture most of the structure in the data without unnecessary complexity. This result likely represents a natural 
+                division between normal and abnormal network behaviors. After selecting K = 2, I visualized the clusters using PCA-reduced features, which helped project the high-dimensional data into a two-dimensional space. The visualization shows two distinct 
+                groupings, where one large, dense cluster corresponds to typical network activity, while a smaller, more isolated cluster may represent potential attack traffic or unusual connections. Overall, K-Means provided a fast and interpretable way to segment 
+                network sessions into meaningful behavioral categories.
                 <figure>
-                    <img src="images/project4_model1.1.png" alt="elbow method for optimal k graph" style="width:75%">
+                    <img src="images/project4_model1.1.png" alt="elbow method for optimal k graph" style="width:50%">
                     <figcaption>Figure 3: Elbow Method for Optimal K Graph</figcaption>
                 </figure>
                 <figure>
@@ -770,7 +770,16 @@
             </p>
             <h3>Storytelling</h3>
             <p>
-
+                When comparing the two clustering methods side by side, clear differences emerge in how each model identifies and structures the network traffic. In the K-Means model on the left, two distinct clusters are visible with cluster 0 representing 
+                attack traffic, while cluster 1 corresponds to benign or normal network activity. The separation between these groups indicates that K-Means effectively distinguished abnormal network behaviors from legitimate ones, which supports its suitability 
+                for intrusion detection. In contrast, the Agglomerative Clustering model on the right produced three clusters, revealing an additional layer of granularity within the attack traffic. This suggests that while K-Means captures the broad distinction 
+                between normal and malicious flows, Agglomerative Clustering identifies subcategories of attacks, potentially differentiating between types such as DoS, probing, or data exfiltration attempts. The hierarchical structure of Agglomerative Clustering 
+                provides richer interpretability but at a higher computational cost. Overall, the results confirm that unsupervised clustering can meaningfully separate malicious and benign activities, with K-Means offering efficiency and clarity, and Agglomerative 
+                Clustering delivering depth and behavioral nuance.
+                <figure>
+                    <img src="images/project4_evaluation.png" alt="k-means and agglomerative clustering comparison visualization" style="width:75%">
+                    <figcaption>Figure 6: K-Means and Agglomerative Clustering Comparison Visualization<figcaption>
+                </figure>
             </p>
             <h3>Impact</h3>
             <p>
@@ -782,7 +791,10 @@
             </p>
             <h3>References & Code</h3>
             <ul>
-                <li><a href="pythonlabs/" target="_blank">.html</a></li>
+                <li>Moustafa, Nour, and Jill Slay. The UNSW-NB15 Dataset. UNSW Research, 2 June 2021, <a href="https://research.unsw.edu.au/projects/unsw-nb15-dataset" target="_blank">https://research.unsw.edu.au/projects/unsw-nb15-dataset</a></li>
+                <li>Moustafa, Nour, and Jill Slay. <a href="https://ieeexplore.ieee.org/abstract/document/7348942" target="_blank">"UNSW-NB15: a comprehensive data set for network intrusion detection systems (UNSW-NB15 network data set)."</a> Military Communications and Information Systems Conference (MilCIS), 2015. IEEE, 2015.</li>
+                <li>Moustafa, Nour, and Jill Slay. <a href="https://www.tandfonline.com/doi/abs/10.1080/19393555.2015.1125974" target="_blank">"The evaluation of Network Anomaly Detection Systems: Statistical analysis of the UNSW-NB15 dataset and the comparison with the KDD99 dataset."</a> Information Security Journal: A Global Perspective (2016): 1-14.</li>
+                <li><a href="pythonlabs/network_intrusion_clustering.html" target="_blank">network_intrusion_clustering.html</a></li>
             </ul>
         </section>
         <section id="group" class="hidden">
