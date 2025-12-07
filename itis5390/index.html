@@ -3,17 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Capstone Interaction Design Project (ITIS 5390)</title>
+    <title>InnovateSync - Microsoft Teams Redesign</title>
     <link id="styles" rel="stylesheet" href="default.css">
 </head>
 <body>
     <header>
-        <h1>Capstone Interaction Design Project (ITIS 5390)</h1>
+        <h1>InnovateSync - Microsoft Teams Redesign</h1>
         <nav>
             <ul>
-                <li><a href="#home" onclick="showSection('home')">Home</a></li>
+                <li><a href="#home" onclick="showSection('home')">Overview</a></li>
                 <li><a href="#contributions" onclick="showSection('contributions')">Contributions</a></li>
                 <li><a href="#journey" onclick="showSection('journey')">Journey</a></li>
+                <li><a href="#visuals" onclick="showSection('visuals')">Visuals</a></li>
             </ul>
         </nav>
     </header>
@@ -21,29 +22,49 @@
         <section id="home" class="hidden">
             <h2>Project Overview</h2>
             <p>
-                Hello, my name is Efren Antonio, and this site showcases my work in secure programming and penetration testing through a series of project reports 
-                completed as part of my coursework in ITIS 5390 - Capstone Interaction Design Project at UNC Charlotte.
+                Hello, my name is Efren Antonio, and this site showcases my ITIS 5390 - Capstone Interaction Design Project at UNC Charlotte. This project focuses on 
+                redesigning Microsoft Teams to improve productivity and enhance team collaboration. A key feature of this redesign is the introduction of Live Rooms: 
+                always-open voice and video spaces where team members can drop in to collaborate in real time, ask quick questions, or brainstorm, and leave seamlessly 
+                when finished, similar to the experience of modern drop-in communication platforms but designed for a professional work environment. The project emphasizes 
+                user-centered design, accessibility, and seamless integration of new functionality to create a more focused and efficient collaboration experience.
             </p>
-            
+            <p>
+                I worked in a group of 6 cross-functional student team members for the duration of a whole semester (August 2025 - December 2025). My role in the group was 
+                UX researcher which involved conducting user research to identify pain points in the current Microsoft Teams interface, using that research to develop wireframes 
+                and prototypes using Figma, and eventually implementing a completed redesign using HTML, CSS, JavaScript, and JSON. Below are links to key project artifacts:
+                <ul>
+                    <li>Live Site: <a href="https://jstega13.github.io/ITIS-5390/" target="_blank">https://jstega13.github.io/ITIS-5390/</a></li>
+                    <li>Figma: <a href="https://www.figma.com/design/1VvPMefCPXXfnP5Ucxbb7n/InnovateSync_Wireframes_Week7?node-id=111-126&p=f&t=XPvPi0FNuETj49Pp-0" target="_blank">https://www.figma.com/design/1VvPMefCPXXfnP5Ucxbb7n/InnovateSync_Wireframes_Week7?node-id=111-126&p=f&t=XPvPi0FNuETj49Pp-0</a></li>
+                    <li>GitHub Repository: <a href="https://github.com/jstega13/ITIS-5390" target="_blank">https://github.com/jstega13/ITIS-5390</a></li>
+                </ul>
+            </p>
         </section>
         <section id="contributions" class="hidden">
             <h2>My Contributions</h2>
             <p>
-                In this capstone project, I played a key role in designing and developing a user-centric application focused on enhancing cybersecurity awareness. 
-                My contributions included conducting user research to identify pain points, creating wireframes and prototypes, and implementing secure coding practices 
-                to ensure the application's resilience against common vulnerabilities. Additionally, I collaborated closely with team members to integrate feedback and 
-                iteratively improve the user experience throughout the development process.
+                As the UX researcher for the InnovateSync project, my contributions included conducting user research to identify pain points, helping build wireframes and prototypes, 
+                and collaborating closely with team members to integrate feedback and iteratively improve the user experience throughout the development process.
             </p>
         </section>
         <section id="journey" class="hidden">
             <h2>My Journey</h2>
             <p>
                 This capstone project has been a transformative experience in my academic journey. It allowed me to apply theoretical knowledge from my coursework in a 
-                practical setting, honing my skills in user-centered design and secure software development. Throughout the project, I faced challenges that required creative 
-                problem-solving and adaptability, ultimately leading to personal and professional growth. This experience has solidified my passion for cybersecurity and user 
-                experience design, motivating me to pursue further opportunities in these fields.
+                practical setting, honing my skills in user-centered design and working with a team of students proficient in their respective roles. Throughout the project, I faced challenges that required creative 
+                problem-solving and adaptability, ultimately leading to personal and professional growth. 
             </p>
         </section>
+        <section id="visuals" class="hidden">
+            <h2>Visuals</h2>
+            <p>
+                Below are some visuals showcasing the redesign of Microsoft Teams, highlighting the process from initial prototype to final design. First is the 
+            </p>
+            <figure>
+                <img src="images/innovatesyncfigma.png" alt="InnovateSync Mockup" style="width:50%">
+                <img src="images/homepage.png" alt="InnovateSync Mockup" style="width:50%">
+            </figure>
+        </section>
+    </main>
 </body>
 <script>
     function showSection(sectionId) {
