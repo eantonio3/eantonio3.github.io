@@ -12,55 +12,37 @@
         <nav>
             <ul>
                 <li><a href="#home" onclick="showSection('home')">Home</a></li>
-                <li><a href="#report1" onclick="showSection('report1')">Report 1</a></li>
-                <li><a href="#report2" onclick="showSection('report2')">Report 2</a></li>
+                <li><a href="#contributions" onclick="showSection('contributions')">Contributions</a></li>
+                <li><a href="#journey" onclick="showSection('journey')">Journey</a></li>
             </ul>
         </nav>
     </header>
     <main>
         <section id="home" class="hidden">
-            <h2>Home</h2>
+            <h2>Project Overview</h2>
             <p>
                 Hello, my name is Efren Antonio, and this site showcases my work in secure programming and penetration testing through a series of project reports 
-                completed as part of my coursework in ITIS 4221 - Secure Programming and Penetration Testing at UNC Charlotte.
+                completed as part of my coursework in ITIS 5390 - Capstone Interaction Design Project at UNC Charlotte.
             </p>
+            
+        </section>
+        <section id="contributions" class="hidden">
+            <h2>My Contributions</h2>
             <p>
-                Each report highlights the process of identifying, exploiting, and mitigating common web application vulnerabilities such as SQL injection, cross-site 
-                scripting (XSS), cross-site request forgery (CSRF), broken access control, SSRF, and clickjacking. In addition, secure coding practices and configuration-based 
-                defenses, such as Apache Shiro access control updates, are demonstrated to show how vulnerabilities can be effectively remediated.
-            </p> 
-            <p>
-                The goal of this portfolio is to provide a clear and professional record of my hands-on penetration testing experience and secure software development practices, 
-                while making the material accessible to others who are interested in learning more about web application security.
+                In this capstone project, I played a key role in designing and developing a user-centric application focused on enhancing cybersecurity awareness. 
+                My contributions included conducting user research to identify pain points, creating wireframes and prototypes, and implementing secure coding practices 
+                to ensure the application's resilience against common vulnerabilities. Additionally, I collaborated closely with team members to integrate feedback and 
+                iteratively improve the user experience throughout the development process.
             </p>
         </section>
-        <section id="report1" class="hidden">
-            <h2>Report 1</h2>
+        <section id="journey" class="hidden">
+            <h2>My Journey</h2>
             <p>
-                This report of the Tunestore application identifies and demonstrates multiple critical vulnerabilities - most notably SQL injection, several 
-                forms of XSS (stored and reflected), CSRF, broken access control, DOM-based XSS, and clickjacking - and shows how each can be exploited. The 
-                SQL injection flaws allow attackers to log in as random or specific users and even register accounts with arbitrarily large balances by injecting 
-                SQL into login and registration fields. Stored and reflected XSS enable persistent or immediate execution of attacker-supplied scripts (e.g., 
-                in CD comments or echoed error messages), while DOM-based XSS and a phishing page capture credentials by changing form actions. CSRF and 
-                clickjacking attacks are used to force victims to add friends, send gifts, or change passwords without their consent, and broken access 
-                control lets attackers switch accounts by tampering with URL parameters. Together these weaknesses permit account takeover, data theft, 
-                fraud, and unauthorized actions - requiring immediate remediation (input validation, parameterized queries, output encoding, CSRF tokens, 
-                proper session/authorization checks, and anti-clickjacking headers).
+                This capstone project has been a transformative experience in my academic journey. It allowed me to apply theoretical knowledge from my coursework in a 
+                practical setting, honing my skills in user-centered design and secure software development. Throughout the project, I faced challenges that required creative 
+                problem-solving and adaptability, ultimately leading to personal and professional growth. This experience has solidified my passion for cybersecurity and user 
+                experience design, motivating me to pursue further opportunities in these fields.
             </p>
-            <embed src="pdf/ITIS 4221 - Vulnerability Assessment & Systems Assurance Report.pdf" type="application/pdf" width="800" height="600">
-        </section>
-        <section id="report2" class="hidden">
-            <h2>Report 2</h2>
-            <p>
-                This report documents the identification, exploitation, and mitigation of multiple vulnerabilities in the penetration_test application, 
-                including SSRF, information disclosure (IDOR), and broken access control. The SSRF flaw allowed attackers to manipulate URL parameters 
-                and force backend requests, which was mitigated by validating inputs with an allowlist. The information disclosure issue exposed sensitive 
-                fields like passwords and pay amounts because entire session objects were returned; the fix involved sanitizing responses to include only 
-                necessary data. The access control vulnerability enabled attackers to change customer IDs and view unauthorized profiles, which was resolved 
-                by enforcing checks against the logged-in user's session. Lastly, the Apache Shiro configuration was updated to demonstrate access control 
-                adjustments through role and permission changes without altering the Java codebase.
-            </p>
-            <embed src="pdf/ITIS 4221 - Access Control and SSRF Report.pdf" type="application/pdf" width="800" height="600">
         </section>
 </body>
 <script>
